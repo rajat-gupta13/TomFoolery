@@ -1,0 +1,14 @@
+#pane {
+    -fx-background-image: url("Background1.jpg");
+    -fx-background-size: 1920 1080;
+    -fx-background-position: center center;
+    -fx-background-repeat: stretch;
+}
+
+#button {
+    -fx-background-radius: 5em;
+}
+
+.button:pressed {
+    -fx-background-color:#FFD54F ;
+}
