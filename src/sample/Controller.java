@@ -24,7 +24,7 @@ public class Controller {
         System.out.println("Selecting Shows");
         String s="!vcc1=0!rst901#";
         testMethod.SendInstructionToWeigl(s);
-        Parent pageone = FXMLLoader.load(getClass().getResource("Test.fxml"));
+        Parent pageone = FXMLLoader.load(getClass().getResource("StartShows.fxml"));
         testMethod.ShowSceneFunction(pageone, event);
     }
     public void PressAdmin(javafx.event.ActionEvent event) throws IOException

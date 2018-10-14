@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.EndShows">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Pane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Label layoutX="737.0" layoutY="89.0" text="Select Shows">
+               <font>
+                  <Font name="Montserrat Bold" size="64.0" />
+               </font>
+            </Label>
+            <Label layoutX="624.0" layoutY="185.0" text="Choose an End show">
+               <font>
+                  <Font name="Montserrat Regular" size="64.0" />
+               </font>
+            </Label>
+            <Button id="button" fx:id="goodnight" layoutX="443.0" layoutY="494.0" mnemonicParsing="false" onAction="#PressGoodnightCastle" prefHeight="116.0" prefWidth="400.0" stylesheets="@Style.css" text="GOODNIGHT CASTLE">
+               <font>
+                  <Font name="Montserrat Regular" size="30.0" />
+               </font>
+            </Button>
+            <Button id="button" fx:id="seeyalater" layoutX="1095.0" layoutY="494.0" mnemonicParsing="false" onAction="#PressSeeYaLater" prefHeight="116.0" prefWidth="400.0" stylesheets="@Style.css" text="SEE YA LATER!">
+               <font>
+                  <Font name="Montserrat Regular" size="30.0" />
+               </font>
+            </Button>
+            <Button id="button" fx:id="next" disable="true" layoutX="1439.0" layoutY="877.0" mnemonicParsing="false" onAction="#PressNext" prefHeight="116.0" prefWidth="400.0" stylesheets="@Style.css" text="NEXT">
+               <font>
+                  <Font name="Montserrat Regular" size="30.0" />
+               </font>
+            </Button>
+            <Button id="button" layoutX="1673.0" layoutY="31.0" mnemonicParsing="false" onAction="#PressBack" prefHeight="95.0" prefWidth="214.0" stylesheets="@Style.css" text="BACK">
+               <font>
+                  <Font name="Montserrat Regular" size="30.0" />
+               </font>
+            </Button>
+            <Button id="button" layoutX="43.0" layoutY="31.0" mnemonicParsing="false" onAction="#PressMainMenu" prefHeight="116.0" prefWidth="400.0" stylesheets="@Style.css" text="MAIN MENU">
+               <font>
+                  <Font name="Montserrat Regular" size="30.0" />
+               </font>
+            </Button>
+         </children></Pane>
+   </children>
+</GridPane>

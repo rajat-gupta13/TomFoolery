@@ -6,7 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.input.KeyCombination;
 import javafx.stage.Stage;
-
+import java.util.*;
 import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
@@ -15,6 +15,9 @@ import java.net.InetAddress;
 public class Method {
     DatagramSocket socket;
     InetAddress address;
+
+    public static Queue<String> showQueue = new LinkedList<>();
+
     public Method()throws Exception
     {
         socket=new DatagramSocket();
