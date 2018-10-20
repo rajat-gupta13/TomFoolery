@@ -58,7 +58,7 @@ public class EndShows {
     public void PressNext(javafx.event.ActionEvent event) throws Exception {
 
         testMethod.ResetAllPositions();
-        Parent pageone = FXMLLoader.load(getClass().getResource("Welcome1.fxml"));
+        Parent pageone = FXMLLoader.load(getClass().getResource("ReviewSelection.fxml"));
         testMethod.ShowSceneFunction(pageone,event);
 
     }

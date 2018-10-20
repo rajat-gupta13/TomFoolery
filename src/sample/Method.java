@@ -72,4 +72,37 @@ public class Method {
         Parent pageone = FXMLLoader.load(getClass().getResource("sample.fxml"));
         ShowSceneFunction(pageone, event);
     }
+
+    public String ShowSelector()
+    {
+        if (showQueue.element() != null)
+        {
+            switch (showQueue.element()) {
+                case "welcome":
+                    showQueue.remove();
+                    return "WelcomeCastle1";
+
+                case "magic":
+                    showQueue.remove();
+                    return "MagicTrick1";
+
+                case "dance":
+                    showQueue.remove();
+                    return "DanceParty1";
+
+                case "story":
+                    showQueue.remove();
+                    return "Storytime1";
+
+                case "goodnight":
+                    showQueue.remove();
+                    return "GoodnightCastle1";
+
+                case "seeyalater":
+                    showQueue.remove();
+                    return "SeeYaLater1";
+            }
+        }
+        return null;
+    }
 }

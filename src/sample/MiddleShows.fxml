@@ -43,7 +43,7 @@
                   <Font name="Montserrat Regular" size="30.0" />
                </font>
             </Button>
-            <Button id="button" layoutX="1674.0" layoutY="31.0" mnemonicParsing="false" onAction="#PressBack" prefHeight="97.0" prefWidth="211.0" stylesheets="@Style.css" text="BACK">
+            <Button id="button" layoutX="55.0" layoutY="41.0" mnemonicParsing="false" onAction="#PressBack" prefHeight="97.0" prefWidth="211.0" stylesheets="@Style.css" text="BACK">
                <font>
                   <Font name="Montserrat Regular" size="30.0" />
                </font>
@@ -53,7 +53,7 @@
                   <Font name="Montserrat Regular" size="40.0" />
                </font>
             </Label>
-            <Button id="button" layoutX="31.0" layoutY="31.0" mnemonicParsing="false" onAction="#PressMainMenu" prefHeight="116.0" prefWidth="400.0" stylesheets="@Style.css" text="MAIN MENU">
+            <Button id="button" layoutX="1636.0" layoutY="41.0" mnemonicParsing="false" onAction="#PressMainMenu" prefHeight="97.0" prefWidth="231.0" stylesheets="@Style.css" text="MAIN MENU">
                <font>
                   <Font name="Montserrat Regular" size="30.0" />
                </font>

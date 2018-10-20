@@ -49,7 +49,7 @@ public class Calisthenics {
     public void PressTorsoBend(javafx.event.ActionEvent event) throws Exception {
         torso.setStyle("-fx-background-color: #66BB6A; ");
         System.out.println("Test Torso Bend");
-        String s="!vcc1=0!rst803#";
+        String s="!vcc1=0!rst805#";
         testMethod.SendInstructionToWeigl(s);
     }
 
@@ -62,7 +62,7 @@ public class Calisthenics {
     public void PressScepter(javafx.event.ActionEvent event) throws Exception {
         scepter.setStyle("-fx-background-color: #66BB6A; ");
         System.out.println("TestScepter");
-        String s="!vcc1=0!rst805#";
+        String s="!vcc1=0!rst803#";
         testMethod.SendInstructionToWeigl(s);
     }
     public void PressStop(javafx.event.ActionEvent event) throws Exception {
