@@ -28,22 +28,22 @@
                   <Font name="Montserrat Regular" size="30.0" />
                </font>
             </Button>
-            <Button id="button" fx:id="nextDialogue" layoutX="759.0" layoutY="900.0" mnemonicParsing="false" prefHeight="106.0" prefWidth="403.0" stylesheets="@Style.css" text="PLAY NEXT DIALOGUE" visible="false">
+            <Button id="button" fx:id="nextDialogue" layoutX="759.0" layoutY="900.0" mnemonicParsing="false" onAction="#PressNextDialogue" prefHeight="106.0" prefWidth="403.0" stylesheets="@Style.css" text="PLAY NEXT DIALOGUE" visible="false">
                <font>
                   <Font name="Montserrat Regular" size="30.0" />
                </font>
             </Button>
-            <Label fx:id="tom" layoutX="917.0" layoutY="318.0" text="TOM">
+            <Label fx:id="tom" layoutX="917.0" layoutY="318.0" text="TOM" visible="false">
                <font>
                   <Font name="Montserrat Bold" size="36.0" />
                </font>
             </Label>
-            <Label fx:id="volunteer" layoutX="843.0" layoutY="579.0" text="VOLUNTEER">
+            <Label fx:id="volunteer" layoutX="843.0" layoutY="579.0" text="VOLUNTEER" visible="false">
                <font>
                   <Font name="Montserrat Bold" size="36.0" />
                </font>
             </Label>
-            <Button id="button" layoutX="811.0" layoutY="412.0" mnemonicParsing="false" prefHeight="79.0" prefWidth="300.0" stylesheets="@Style.css" text="START SHOW" visible="false">
+            <Button id="button" fx:id="startShow" layoutX="811.0" layoutY="412.0" mnemonicParsing="false" onAction="#PressStartShow" prefHeight="79.0" prefWidth="300.0" stylesheets="@Style.css" text="START SHOW">
                <font>
                   <Font name="Montserrat Regular" size="30.0" />
                </font></Button>
@@ -112,7 +112,7 @@
                   <Font name="Montserrat Regular" size="33.0" />
                </font>
             </Label>
-            <Label fx:id="tom7" layoutX="471.0" layoutY="405.0" prefHeight="113.0" prefWidth="976.0" text="A long time… so long in fact that I really hope that I never take Joel for granite! " textAlignment="CENTER" textFill="#fff200" wrapText="true">
+            <Label fx:id="tom7" layoutX="471.0" layoutY="405.0" prefHeight="113.0" prefWidth="976.0" text="A long time… so long in fact that I really hope that I never take Joel for granite! " textAlignment="CENTER" textFill="#fff200" visible="false" wrapText="true">
                <font>
                   <Font name="Montserrat Regular" size="33.0" />
                </font>
