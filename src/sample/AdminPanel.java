@@ -53,20 +53,7 @@ public class AdminPanel {
     public void PressThankYou(javafx.event.ActionEvent event) throws IOException
     {
         System.out.println("Play Thank You Sponsors!");
-        String s="!vcc1=0!rst901#";
-        testMethod.SendInstructionToWeigl(s);
-        thankyou.setDisable(true);
-        calisthenics.setDisable(true);
-        control.setDisable(true);
-        mainmenu.setDisable(true);
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                thankyou.setDisable(false);
-                calisthenics.setDisable(false);
-                control.setDisable(false);
-                mainmenu.setDisable(false);
-            }
-        }, 1*2000);
+        Parent pageone = FXMLLoader.load(getClass().getResource("ThankYouSponsors.fxml"));
+        testMethod.ShowSceneFunction(pageone, event);
     }
 }

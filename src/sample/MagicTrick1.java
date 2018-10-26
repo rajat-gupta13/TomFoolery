@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.*;
 
-public class SeeYaLater1 implements Initializable{
+public class MagicTrick1 implements Initializable{
     @FXML
     private Label tom;
     @FXML
@@ -23,11 +23,7 @@ public class SeeYaLater1 implements Initializable{
     @FXML
     private Label tom2;
     @FXML
-    private Label volunteer2;
-    @FXML
     private Label tom3;
-    @FXML
-    private Label volunteer3;
     @FXML
     private Label tom4;
     @FXML
@@ -37,22 +33,31 @@ public class SeeYaLater1 implements Initializable{
     @FXML
     private Label volunteer5;
     @FXML
+    private Label tom6;
+    @FXML
+    private Label volunteer6;
+    @FXML
+    private Label tom7;
+    @FXML
+    private Label volunteer7;
+    @FXML
+    private Button next;
+    @FXML
     private Button nextDialogue;
     @FXML
     private Button startShow;
-    @FXML
-    private Button endShow;
 
     private Method testMethod = new Method();
     Timer timer = new Timer();
     private int dialogueCount = 0;
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         dialogueCount = 0;
     }
 
-    public SeeYaLater1 () throws Exception
+    public MagicTrick1 () throws Exception
     {
 
     }
@@ -63,10 +68,17 @@ public class SeeYaLater1 implements Initializable{
         Method.showQueue.clear();
     }
 
+    public void PressNext(javafx.event.ActionEvent event) throws Exception
+    {
+        testMethod.ResetAllPositions();
+        Parent pageone = FXMLLoader.load(getClass().getResource(testMethod.ShowSelector() +".fxml"));
+        testMethod.ShowSceneFunction(pageone,event);
+    }
+
     public void PressStartShow(javafx.event.ActionEvent event) throws IOException
     {
-        System.out.println("Playing See Ya Later Dialogue 1");
-        String s = "!vcc1=0!rst111#";
+        System.out.println("Playing Magic Trick Dialogue 1");
+        String s = "!vcc1=0!rst121#";
         testMethod.SendInstructionToWeigl(s);
         dialogueCount++;
         startShow.setVisible(false);
@@ -84,9 +96,9 @@ public class SeeYaLater1 implements Initializable{
                     public void run() {
                         nextDialogue.setVisible(true);
                     }
-                }, 1*2000);
+                }, 1*5000);
             }
-        }, 1*5000);
+        }, 1*16000);
 
     }
 
@@ -94,55 +106,46 @@ public class SeeYaLater1 implements Initializable{
     {
         dialogueCount++;
         nextDialogue.setVisible(false);
-        switch (dialogueCount) {
+        switch (dialogueCount)
+        {
             case 2:
-                System.out.println("Playing See Ya Later Dialogue 2");
-                String s = "!vcc1=0!rst112#";
+                System.out.println("Playing Magic Trick Dialogue 2");
+                String s = "!vcc1=0!rst122#";
                 testMethod.SendInstructionToWeigl(s);
                 tom1.setVisible(false);
                 tom2.setVisible(true);
+                volunteer.setVisible(false);
                 volunteer1.setVisible(false);
-                volunteer2.setVisible(true);
-                volunteer2.setDisable(true);
                 timer.schedule(new TimerTask() {
                     @Override
                     public void run() {
-                        volunteer2.setDisable(false);
-                        timer.schedule(new TimerTask() {
-                            @Override
-                            public void run() {
-                                nextDialogue.setVisible(true);
-                            }
-                        }, 1 * 1000);
+                        nextDialogue.setVisible(true);
                     }
-                }, 1 * 1000);
+                }, 1*6000);
                 break;
 
             case 3:
-                System.out.println("Playing See Ya Later Dialogue 3");
-                s = "!vcc1=0!rst113#";
+                System.out.println("Playing Magic Trick Dialogue 3");
+                s = "!vcc1=0!rst123#";
                 testMethod.SendInstructionToWeigl(s);
                 tom2.setVisible(false);
                 tom3.setVisible(true);
-                volunteer2.setVisible(false);
-                volunteer3.setVisible(true);
-                volunteer3.setDisable(true);
                 timer.schedule(new TimerTask() {
                     @Override
                     public void run() {
-                        volunteer3.setDisable(false);
                         nextDialogue.setVisible(true);
+
                     }
-                }, 1 * 1000);
+                }, 1*14000);
                 break;
 
             case 4:
-                System.out.println("Playing See Ya Later Dialogue 4");
-                s = "!vcc1=0!rst114#";
+                System.out.println("Playing Magic Trick Dialogue 4");
+                s = "!vcc1=0!rst124#";
                 testMethod.SendInstructionToWeigl(s);
                 tom3.setVisible(false);
                 tom4.setVisible(true);
-                volunteer3.setVisible(false);
+                volunteer.setVisible(true);
                 volunteer4.setVisible(true);
                 volunteer4.setDisable(true);
                 timer.schedule(new TimerTask() {
@@ -154,14 +157,14 @@ public class SeeYaLater1 implements Initializable{
                             public void run() {
                                 nextDialogue.setVisible(true);
                             }
-                        }, 1 * 2000);
+                        }, 1*4000);
                     }
-                }, 1 * 14000);
+                }, 1*6000);
                 break;
 
             case 5:
-                System.out.println("Playing See Ya Later Dialogue 5");
-                s = "!vcc1=0!rst115#";
+                System.out.println("Playing Magic Trick Dialogue 5");
+                s = "!vcc1=0!rst125#";
                 testMethod.SendInstructionToWeigl(s);
                 tom4.setVisible(false);
                 tom5.setVisible(true);
@@ -175,14 +178,60 @@ public class SeeYaLater1 implements Initializable{
                         timer.schedule(new TimerTask() {
                             @Override
                             public void run() {
-                                endShow.setVisible(true);
+                                nextDialogue.setVisible(true);
                             }
-                        }, 1 * 1000);
+                        }, 1*3000);
                     }
-                }, 1 * 16000);
+                }, 1*8000);
                 break;
 
-        }
-    }
+            case 6:
+                System.out.println("Playing Magic Trick Dialogue 6");
+                s = "!vcc1=0!rst126#";
+                testMethod.SendInstructionToWeigl(s);
+                tom5.setVisible(false);
+                tom6.setVisible(true);
+                volunteer5.setVisible(false);
+                volunteer6.setVisible(true);
+                volunteer6.setDisable(true);
+                timer.schedule(new TimerTask() {
+                    @Override
+                    public void run() {
+                        volunteer6.setDisable(false);
+                        timer.schedule(new TimerTask() {
+                            @Override
+                            public void run() {
+                                nextDialogue.setVisible(true);
+                            }
+                        }, 1*3000);
+                    }
+                }, 1*5000);
+                break;
 
+            case 7:
+                System.out.println("Playing Magic Trick Dialogue 7");
+                s = "!vcc1=0!rst127#";
+                testMethod.SendInstructionToWeigl(s);
+                tom6.setVisible(false);
+                tom7.setVisible(true);
+                volunteer6.setVisible(false);
+                volunteer7.setVisible(true);
+                volunteer7.setDisable(true);
+                timer.schedule(new TimerTask() {
+                    @Override
+                    public void run() {
+                        volunteer7.setDisable(false);
+                        timer.schedule(new TimerTask() {
+                            @Override
+                            public void run() {
+                                next.setVisible(true);
+                            }
+                        }, 1*3000);
+                    }
+                }, 1*5000);
+                break;
+        }
+
+
+    }
 }
