@@ -23,7 +23,7 @@
                   <Font name="Montserrat Bold" size="64.0" />
                </font>
             </Label>
-            <Button id="button" fx:id="startShow" layoutX="810.0" layoutY="461.0" mnemonicParsing="false" onAction="#PressStartShow" prefHeight="79.0" prefWidth="300.0" stylesheets="@Style.css" text="START SHOW" visible="false">
+            <Button id="button" fx:id="startShow" layoutX="810.0" layoutY="461.0" mnemonicParsing="false" onAction="#PressStartShow" prefHeight="79.0" prefWidth="300.0" stylesheets="@Style.css" text="START SHOW">
                <font>
                   <Font name="Montserrat Regular" size="30.0" />
                </font>
@@ -33,12 +33,12 @@
                   <Font name="Montserrat Regular" size="30.0" />
                </font>
             </Button>
-            <Label fx:id="tom" layoutX="916.0" layoutY="265.0" text="TOM">
+            <Label fx:id="tom" layoutX="916.0" layoutY="265.0" text="TOM" visible="false">
                <font>
                   <Font name="Montserrat Bold" size="36.0" />
                </font>
             </Label>
-            <Label fx:id="volunteer" layoutX="843.0" layoutY="540.0" text="VOLUNTEER">
+            <Label fx:id="volunteer" layoutX="843.0" layoutY="540.0" text="VOLUNTEER" visible="false">
                <font>
                   <Font name="Montserrat Bold" size="36.0" />
                </font>
@@ -48,17 +48,17 @@
                   <Font name="Montserrat Regular" size="30.0" />
                </font>
             </Button>
-            <Label fx:id="volunteer2" layoutX="844.0" layoutY="265.0" text="VOLUNTEER" visible="false">
+            <Label fx:id="volunteerFirst" layoutX="844.0" layoutY="265.0" text="VOLUNTEER" visible="false">
                <font>
                   <Font name="Montserrat Bold" size="36.0" />
                </font>
             </Label>
-            <Label fx:id="volunteer11" layoutX="634.0" layoutY="355.0" text="I think we should wake up Father Time." textAlignment="CENTER" textFill="#0dff82" visible="false">
+            <Label fx:id="volunteerFirstDialogue" layoutX="634.0" layoutY="355.0" text="I think we should wake up Father Time." textAlignment="CENTER" textFill="#0dff82" visible="false">
                <font>
                   <Font name="Montserrat Regular" size="33.0" />
                </font>
             </Label>
-            <Button id="button" fx:id="nextDialogue" layoutX="759.0" layoutY="878.0" mnemonicParsing="false" onAction="#PressNextDialogue" prefHeight="106.0" prefWidth="403.0" stylesheets="@Style.css" text="PLAY NEXT DIALOGUE">
+            <Button id="button" fx:id="nextDialogue" layoutX="759.0" layoutY="878.0" mnemonicParsing="false" onAction="#PressNextDialogue" prefHeight="106.0" prefWidth="403.0" stylesheets="@Style.css" text="PLAY NEXT DIALOGUE" visible="false">
                <font>
                   <Font name="Montserrat Regular" size="30.0" />
                </font>
@@ -73,29 +73,34 @@
                   <Font name="Montserrat Regular" size="33.0" />
                </font>
             </Label>
-            <Label fx:id="tom11" layoutX="651.0" layoutY="355.0" prefHeight="113.0" prefWidth="639.0" text="What?! But we’re having so much fun." textAlignment="CENTER" textFill="#fff200" visible="false" wrapText="true">
+            <Label fx:id="tom2" layoutX="651.0" layoutY="355.0" prefHeight="113.0" prefWidth="639.0" text="What?! But we’re having so much fun." textAlignment="CENTER" textFill="#fff200" visible="false" wrapText="true">
                <font>
                   <Font name="Montserrat Regular" size="33.0" />
                </font>
             </Label>
-            <Label fx:id="volunteer12" layoutX="381.0" layoutY="632.0" prefHeight="106.0" prefWidth="1160.0" text="I know Tom, but think of all the new, fun adventures and memories we can make tomorrow!" textAlignment="CENTER" textFill="#0dff82" visible="false" wrapText="true">
+            <Label fx:id="volunteer2" layoutX="381.0" layoutY="632.0" prefHeight="106.0" prefWidth="1160.0" text="I know Tom, but think of all the new, fun adventures and memories we can make tomorrow!" textAlignment="CENTER" textFill="#0dff82" visible="false" wrapText="true">
                <font>
                   <Font name="Montserrat Regular" size="33.0" />
                </font>
             </Label>
-            <Label fx:id="tom111" layoutX="462.0" layoutY="355.0" prefHeight="113.0" prefWidth="994.0" text="Ok! Let’s wake him up. Kids, can you help us wake up Father Time so he can sing the Castle to sleep?" textAlignment="CENTER" textFill="#fff200" visible="false" wrapText="true">
+            <Label fx:id="tom3" layoutX="462.0" layoutY="355.0" prefHeight="113.0" prefWidth="994.0" text="Ok! Let’s wake him up. Kids, can you help us wake up Father Time so he can sing the Castle to sleep?" textAlignment="CENTER" textFill="#fff200" visible="false" wrapText="true">
                <font>
                   <Font name="Montserrat Regular" size="33.0" />
                </font>
             </Label>
-            <Label fx:id="tom1111" layoutX="364.0" layoutY="355.0" prefHeight="113.0" prefWidth="1192.0" text="Fantastic!  On the count of three, everyone say, “Wake up Father Time!”  Okay?" textAlignment="CENTER" textFill="#fff200" visible="false" wrapText="true">
+            <Label fx:id="tom4" layoutX="364.0" layoutY="355.0" prefHeight="113.0" prefWidth="1192.0" text="Fantastic!  On the count of three, everyone say, “Wake up Father Time!”  Okay?" textAlignment="CENTER" textFill="#fff200" visible="false" wrapText="true">
                <font>
                   <Font name="Montserrat Regular" size="33.0" />
                </font>
             </Label>
-            <Label fx:id="tom11111" layoutX="897.0" layoutY="355.0" prefHeight="113.0" prefWidth="128.0" text="1… 2… 3!" textAlignment="CENTER" textFill="#fff200" wrapText="true">
+            <Label fx:id="tom5" layoutX="897.0" layoutY="355.0" prefHeight="113.0" prefWidth="128.0" text="1… 2… 3!" textAlignment="CENTER" textFill="#fff200" visible="false" wrapText="true">
                <font>
                   <Font name="Montserrat Regular" size="33.0" />
+               </font>
+            </Label>
+            <Label fx:id="tom6" layoutX="706.0" layoutY="355.0" prefHeight="113.0" prefWidth="508.0" text="(Interaction with Father Time)" textAlignment="CENTER" textFill="#fff200" visible="false" wrapText="true">
+               <font>
+                  <Font name="Montserrat Italic" size="33.0" />
                </font>
             </Label>
          </children></Pane>

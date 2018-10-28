@@ -31,7 +31,7 @@ public class AdminLogin {
         }
         if ((usernameText.getText().equals("admin")) )
         {
-            if ((passwordText.getText().equals("etcdemo123")))
+            if ((passwordText.getText().equals("gktwtomadmin123")))
             {
                 Parent pageone = FXMLLoader.load(getClass().getResource("AdminPanel.fxml"));
                 testMethod.ShowSceneFunction(pageone, event);
