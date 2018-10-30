@@ -93,6 +93,12 @@ public class MiddleShows implements Initializable {
         testMethod.SendInstructionToWeigl(s);
     }
 
+    public void PressSeasonalContent(javafx.event.ActionEvent event) throws Exception {
+
+        Parent pageone = FXMLLoader.load(getClass().getResource("SeasonalContent.fxml"));
+        testMethod.ShowSceneFunction(pageone,event);
+    }
+
     public void PressMainMenu(javafx.event.ActionEvent event) throws IOException
     {
         testMethod.PressMainMenuFunction(event);

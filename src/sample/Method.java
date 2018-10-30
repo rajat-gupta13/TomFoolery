@@ -11,12 +11,15 @@ import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
+import java.util.prefs.*;
 
 public class Method {
     DatagramSocket socket;
     InetAddress address;
 
     public static Queue<String> showQueue = new LinkedList<>();
+
+
 
     public Method()throws Exception
     {
@@ -52,6 +55,18 @@ public class Method {
         s="!dfl1:5%60<3.5#";
         SendInstructionToWeigl(s);
 
+    }
+
+    public void SavePreferences(String key, boolean status)
+    {
+        Preferences prefs = Preferences.userNodeForPackage(Method.class);
+        prefs.putBoolean(key, status);
+    }
+
+    public Boolean ReadPreferences(String key)
+    {
+        Preferences prefs = Preferences.userNodeForPackage(Method.class);
+        return prefs.getBoolean(key, false);
     }
 
     public void ShowSceneFunction(Parent pageone, javafx.event.ActionEvent event)
@@ -101,6 +116,46 @@ public class Method {
                 case "seeyalater":
                     showQueue.remove();
                     return "SeeYaLater1";
+
+                case "halloween":
+                    showQueue.remove();
+                    return "Halloween";
+
+                case "christmas":
+                    showQueue.remove();
+                    return "Christmas";
+
+                case "thanksgiving":
+                    showQueue.remove();
+                    return "Thanksgiving";
+
+                case "easter":
+                    showQueue.remove();
+                    return "Easter";
+
+                case "hanukkah":
+                    showQueue.remove();
+                    return "Hanukkah";
+
+                case "independence":
+                    showQueue.remove();
+                    return "IndependenceDay";
+
+                case "birthday":
+                    showQueue.remove();
+                    return "HappyBirthday";
+
+                case "clayton":
+                    showQueue.remove();
+                    return "HappyBirthdayClayton";
+
+                case "veteran":
+                    showQueue.remove();
+                    return "VeteransDay";
+
+                case "labor":
+                    showQueue.remove();
+                    return "LaborDay";
             }
         }
         return null;

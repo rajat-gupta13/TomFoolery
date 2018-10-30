@@ -43,7 +43,7 @@
                   <Font name="Montserrat Regular" size="30.0" />
                </font>
             </Button>
-            <Button id="button" fx:id="calisthenics1" layoutX="804.0" layoutY="652.0" mnemonicParsing="false" onAction="#PressCalisthenics" prefHeight="101.0" prefWidth="313.0" stylesheets="@Style.css" text="OPENING">
+            <Button id="button" fx:id="opening" layoutX="804.0" layoutY="652.0" mnemonicParsing="false" onAction="#PressOpeningCeremony" prefHeight="101.0" prefWidth="313.0" stylesheets="@Style.css" text="OPENING">
                <font>
                   <Font name="Montserrat Regular" size="30.0" />
                </font>

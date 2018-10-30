@@ -6,6 +6,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
 <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MiddleShows">
@@ -23,7 +24,17 @@
                   <Font name="Montserrat Bold" size="64.0" />
                </font>
             </Label>
-            <Label layoutX="612.0" layoutY="197.0" text="Choose Middle shows">
+            <Label layoutX="571.0" layoutY="197.0" text="Choose">
+               <font>
+                  <Font name="Montserrat Regular" size="64.0" />
+               </font>
+            </Label>
+            <Label layoutX="825.0" layoutY="187.0" text="MIDDLE" textFill="#fffb00">
+               <font>
+                  <Font name="Montserrat Bold" size="72.0" />
+               </font>
+            </Label>
+            <Label layoutX="1145.0" layoutY="197.0" text="shows">
                <font>
                   <Font name="Montserrat Regular" size="64.0" />
                </font>
@@ -58,6 +69,12 @@
                   <Font name="Montserrat Regular" size="30.0" />
                </font>
             </Button>
+            <Button id="button" layoutX="737.0" layoutY="716.0" mnemonicParsing="false" onAction="#PressSeasonalContent" prefHeight="131.0" prefWidth="446.0" stylesheets="@Style.css" text="SEASONAL CONTENT">
+               <font>
+                  <Font name="Montserrat Regular" size="30.0" />
+               </font>
+            </Button>
+            <Line endX="600.0" layoutX="976.0" layoutY="669.0" startX="-600.0" />
          </children></Pane>
    </children>
 </GridPane>

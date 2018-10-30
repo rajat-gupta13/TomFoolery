@@ -25,7 +25,7 @@
                   <Font name="Montserrat Bold" size="108.0" />
                </font>
             </Label>
-            <ImageView fitHeight="333.0" fitWidth="650.0" layoutX="675.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="333.0" fitWidth="650.0" layoutX="676.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@gktw-logo-color.png" />
                </image>
@@ -40,6 +40,10 @@
                   <Font name="Montserrat Regular" size="30.0" />
                </font>
             </Button>
+            <Button id="button" fx:id="powerButton" layoutX="1675.0" layoutY="53.0" mnemonicParsing="false" onAction="#PressPower" prefHeight="84.0" prefWidth="185.0" stylesheets="@Style.css" text="POWER">
+               <font>
+                  <Font name="Montserrat Regular" size="30.0" />
+               </font></Button>
          </children></Pane>
    </children>
 </GridPane>
