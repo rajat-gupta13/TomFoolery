@@ -95,7 +95,7 @@ public class Christmas implements Initializable{
                     }
                 }, 1*1000);
             }
-        }, 1*5500);
+        }, 1*10000);
 
     }
 
@@ -138,7 +138,7 @@ public class Christmas implements Initializable{
                             }
                         }, 1 * 1000);
                     }
-                }, 1 * 4000);
+                }, 1 * 11000);
                 break;
 
             case 4:
@@ -161,7 +161,7 @@ public class Christmas implements Initializable{
                             }
                         }, 1 * 1000);
                     }
-                }, 1 * 4000);
+                }, 1 * 750);
                 break;
             case 5:
                 System.out.println("Playing Christmas Dialogue 5");
@@ -176,7 +176,7 @@ public class Christmas implements Initializable{
                     public void run() {
                         next.setVisible(true);
                     }
-                }, 1*2000);
+                }, 1*6000);
                 break;
         }
     }
@@ -192,9 +192,9 @@ public class Christmas implements Initializable{
                         nextDialogue.setVisible(true);
                         playAddYes.setVisible(true);
                     }
-                }, 1 * 1000);
+                }, 1 * 1500);
             }
-        }, 1 * 1500);
+        }, 1 * 6000);
     }
 
     public void PressAddYes(javafx.event.ActionEvent event) throws IOException
@@ -250,7 +250,7 @@ public class Christmas implements Initializable{
                             }
                         }, 1 * 1000);
                     }
-                }, 1 * 4000);
+                }, 1 * 11000);
                 break;
         }
     }

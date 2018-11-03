@@ -19,7 +19,9 @@ public class Method {
 
     public static Queue<String> showQueue = new LinkedList<>();
 
-
+    public static boolean isDancePartyLong = false;
+    public static boolean isDancePartyShort = false;
+    public static boolean isDancePartLoop = false;
 
     public Method()throws Exception
     {

@@ -133,6 +133,42 @@ public class SeasonalContent implements Initializable{
             halloween.setStyle("-fx-background-color: #66BB6A; ");
             System.out.println("Select Halloween");
             Method.showQueue.add("halloween");
+            if (Method.showQueue.contains("christmas")) {
+                christmas.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("christmas");
+            }
+            if (Method.showQueue.contains("hanukkah")) {
+                hanukkah.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("hanukkah");
+            }
+            if (Method.showQueue.contains("easter")) {
+                easter.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("easter");
+            }
+            if (Method.showQueue.contains("thanksgiving")) {
+                thanksgiving.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("thanksgiving");
+            }
+            if (Method.showQueue.contains("independence")) {
+                independence.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("independence");
+            }
+            if (Method.showQueue.contains("clayton")) {
+                clayton.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("clayton");
+            }
+            if (Method.showQueue.contains("birthday")) {
+                birthday.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("birthday");
+            }
+            if (Method.showQueue.contains("labor")) {
+                labor.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("labor");
+            }
+            if (Method.showQueue.contains("veteran")) {
+                veteran.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("veteran");
+            }
         }else if (Method.showQueue.contains("halloween")) {
             halloween.setStyle("-fx-background-color: #FFFFFF; ");
             System.out.println("De-Select Halloween");
@@ -150,6 +186,42 @@ public class SeasonalContent implements Initializable{
             christmas.setStyle("-fx-background-color: #66BB6A; ");
             System.out.println("Select Christmas ");
             Method.showQueue.add("christmas");
+            if (Method.showQueue.contains("halloween")) {
+                halloween.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("halloween");
+            }
+            if (Method.showQueue.contains("hanukkah")) {
+                hanukkah.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("hanukkah");
+            }
+            if (Method.showQueue.contains("easter")) {
+                easter.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("easter");
+            }
+            if (Method.showQueue.contains("thanksgiving")) {
+                thanksgiving.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("thanksgiving");
+            }
+            if (Method.showQueue.contains("independence")) {
+                independence.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("independence");
+            }
+            if (Method.showQueue.contains("clayton")) {
+                clayton.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("clayton");
+            }
+            if (Method.showQueue.contains("birthday")) {
+                birthday.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("birthday");
+            }
+            if (Method.showQueue.contains("labor")) {
+                labor.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("labor");
+            }
+            if (Method.showQueue.contains("veteran")) {
+                veteran.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("veteran");
+            }
         }else if (Method.showQueue.contains("christmas")) {
             christmas.setStyle("-fx-background-color: #FFFFFF; ");
             System.out.println("De-Select Christmas");
@@ -167,6 +239,42 @@ public class SeasonalContent implements Initializable{
             hanukkah.setStyle("-fx-background-color: #66BB6A; ");
             System.out.println("Select Hanukkah");
             Method.showQueue.add("hanukkah");
+            if (Method.showQueue.contains("christmas")) {
+                christmas.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("christmas");
+            }
+            if (Method.showQueue.contains("halloween")) {
+                halloween.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("halloween");
+            }
+            if (Method.showQueue.contains("easter")) {
+                easter.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("easter");
+            }
+            if (Method.showQueue.contains("thanksgiving")) {
+                thanksgiving.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("thanksgiving");
+            }
+            if (Method.showQueue.contains("independence")) {
+                independence.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("independence");
+            }
+            if (Method.showQueue.contains("clayton")) {
+                clayton.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("clayton");
+            }
+            if (Method.showQueue.contains("birthday")) {
+                birthday.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("birthday");
+            }
+            if (Method.showQueue.contains("labor")) {
+                labor.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("labor");
+            }
+            if (Method.showQueue.contains("veteran")) {
+                veteran.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("veteran");
+            }
         }else if (Method.showQueue.contains("hanukkah")) {
             hanukkah.setStyle("-fx-background-color: #FFFFFF; ");
             System.out.println("De-Select Hanukkah");
@@ -184,6 +292,42 @@ public class SeasonalContent implements Initializable{
             easter.setStyle("-fx-background-color: #66BB6A; ");
             System.out.println("Select Easter");
             Method.showQueue.add("easter");
+            if (Method.showQueue.contains("christmas")) {
+                christmas.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("christmas");
+            }
+            if (Method.showQueue.contains("hanukkah")) {
+                hanukkah.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("hanukkah");
+            }
+            if (Method.showQueue.contains("halloween")) {
+                halloween.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("halloween");
+            }
+            if (Method.showQueue.contains("thanksgiving")) {
+                thanksgiving.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("thanksgiving");
+            }
+            if (Method.showQueue.contains("independence")) {
+                independence.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("independence");
+            }
+            if (Method.showQueue.contains("clayton")) {
+                clayton.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("clayton");
+            }
+            if (Method.showQueue.contains("birthday")) {
+                birthday.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("birthday");
+            }
+            if (Method.showQueue.contains("labor")) {
+                labor.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("labor");
+            }
+            if (Method.showQueue.contains("veteran")) {
+                veteran.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("veteran");
+            }
         }else if (Method.showQueue.contains("easter")) {
             easter.setStyle("-fx-background-color: #FFFFFF; ");
             System.out.println("De-Select Easter");
@@ -201,6 +345,42 @@ public class SeasonalContent implements Initializable{
             independence.setStyle("-fx-background-color: #66BB6A; ");
             System.out.println("Select 4th of July");
             Method.showQueue.add("independence");
+            if (Method.showQueue.contains("christmas")) {
+                christmas.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("christmas");
+            }
+            if (Method.showQueue.contains("hanukkah")) {
+                hanukkah.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("hanukkah");
+            }
+            if (Method.showQueue.contains("halloween")) {
+                halloween.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("halloween");
+            }
+            if (Method.showQueue.contains("thanksgiving")) {
+                thanksgiving.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("thanksgiving");
+            }
+            if (Method.showQueue.contains("easter")) {
+                easter.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("easter");
+            }
+            if (Method.showQueue.contains("clayton")) {
+                clayton.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("clayton");
+            }
+            if (Method.showQueue.contains("birthday")) {
+                birthday.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("birthday");
+            }
+            if (Method.showQueue.contains("labor")) {
+                labor.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("labor");
+            }
+            if (Method.showQueue.contains("veteran")) {
+                veteran.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("veteran");
+            }
         }else if (Method.showQueue.contains("independence")) {
             independence.setStyle("-fx-background-color: #FFFFFF; ");
             System.out.println("De-Select 4th of July");
@@ -218,6 +398,42 @@ public class SeasonalContent implements Initializable{
             thanksgiving.setStyle("-fx-background-color: #66BB6A; ");
             System.out.println("Select Thanksgiving");
             Method.showQueue.add("thanksgiving");
+            if (Method.showQueue.contains("christmas")) {
+                christmas.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("christmas");
+            }
+            if (Method.showQueue.contains("hanukkah")) {
+                hanukkah.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("hanukkah");
+            }
+            if (Method.showQueue.contains("halloween")) {
+                halloween.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("halloween");
+            }
+            if (Method.showQueue.contains("easter")) {
+                easter.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("easter");
+            }
+            if (Method.showQueue.contains("independence")) {
+                independence.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("independence");
+            }
+            if (Method.showQueue.contains("clayton")) {
+                clayton.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("clayton");
+            }
+            if (Method.showQueue.contains("birthday")) {
+                birthday.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("birthday");
+            }
+            if (Method.showQueue.contains("labor")) {
+                labor.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("labor");
+            }
+            if (Method.showQueue.contains("veteran")) {
+                veteran.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("veteran");
+            }
         }else if (Method.showQueue.contains("thanksgiving")) {
             thanksgiving.setStyle("-fx-background-color: #FFFFFF; ");
             System.out.println("De-Select Thanksgiving");
@@ -235,6 +451,42 @@ public class SeasonalContent implements Initializable{
             birthday.setStyle("-fx-background-color: #66BB6A; ");
             System.out.println("Select Happy Birthday");
             Method.showQueue.add("birthday");
+            if (Method.showQueue.contains("christmas")) {
+                christmas.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("christmas");
+            }
+            if (Method.showQueue.contains("hanukkah")) {
+                hanukkah.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("hanukkah");
+            }
+            if (Method.showQueue.contains("halloween")) {
+                halloween.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("halloween");
+            }
+            if (Method.showQueue.contains("thanksgiving")) {
+                thanksgiving.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("thanksgiving");
+            }
+            if (Method.showQueue.contains("independence")) {
+                independence.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("independence");
+            }
+            if (Method.showQueue.contains("clayton")) {
+                clayton.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("clayton");
+            }
+            if (Method.showQueue.contains("easter")) {
+                easter.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("easter");
+            }
+            if (Method.showQueue.contains("labor")) {
+                labor.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("labor");
+            }
+            if (Method.showQueue.contains("veteran")) {
+                veteran.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("veteran");
+            }
         }else if (Method.showQueue.contains("birthday")) {
             birthday.setStyle("-fx-background-color: #FFFFFF; ");
             System.out.println("De-Select Happy Birthday");
@@ -252,6 +504,42 @@ public class SeasonalContent implements Initializable{
             clayton.setStyle("-fx-background-color: #66BB6A; ");
             System.out.println("Select Happy Birthday Mayor Clayton");
             Method.showQueue.add("clayton");
+            if (Method.showQueue.contains("christmas")) {
+                christmas.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("christmas");
+            }
+            if (Method.showQueue.contains("hanukkah")) {
+                hanukkah.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("hanukkah");
+            }
+            if (Method.showQueue.contains("halloween")) {
+                halloween.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("halloween");
+            }
+            if (Method.showQueue.contains("thanksgiving")) {
+                thanksgiving.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("thanksgiving");
+            }
+            if (Method.showQueue.contains("independence")) {
+                independence.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("independence");
+            }
+            if (Method.showQueue.contains("easter")) {
+                easter.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("easter");
+            }
+            if (Method.showQueue.contains("birthday")) {
+                birthday.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("birthday");
+            }
+            if (Method.showQueue.contains("labor")) {
+                labor.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("labor");
+            }
+            if (Method.showQueue.contains("veteran")) {
+                veteran.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("veteran");
+            }
         }else if (Method.showQueue.contains("clayton")) {
             clayton.setStyle("-fx-background-color: #FFFFFF; ");
             System.out.println("De-Select Happy Birthday Mayor Clayton");
@@ -269,6 +557,41 @@ public class SeasonalContent implements Initializable{
             labor.setStyle("-fx-background-color: #66BB6A; ");
             System.out.println("Select Labor Day");
             Method.showQueue.add("labor");
+            if (Method.showQueue.contains("christmas")) {
+                christmas.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("christmas");
+            }
+            if (Method.showQueue.contains("hanukkah")) {
+                hanukkah.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("hanukkah");
+            }if (Method.showQueue.contains("halloween")) {
+                halloween.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("halloween");
+            }
+            if (Method.showQueue.contains("thanksgiving")) {
+                thanksgiving.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("thanksgiving");
+            }
+            if (Method.showQueue.contains("independence")) {
+                independence.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("independence");
+            }
+            if (Method.showQueue.contains("clayton")) {
+                clayton.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("clayton");
+            }
+            if (Method.showQueue.contains("birthday")) {
+                birthday.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("birthday");
+            }
+            if (Method.showQueue.contains("easter")) {
+                easter.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("easter");
+            }
+            if (Method.showQueue.contains("veteran")) {
+                veteran.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("veteran");
+            }
         }else if (Method.showQueue.contains("labor")) {
             labor.setStyle("-fx-background-color: #FFFFFF; ");
             System.out.println("De-Select Labor Day");
@@ -286,6 +609,42 @@ public class SeasonalContent implements Initializable{
             veteran.setStyle("-fx-background-color: #66BB6A; ");
             System.out.println("Select Veterans Day");
             Method.showQueue.add("veteran");
+            if (Method.showQueue.contains("christmas")) {
+                christmas.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("christmas");
+            }
+            if (Method.showQueue.contains("hanukkah")) {
+                hanukkah.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("hanukkah");
+            }
+            if (Method.showQueue.contains("halloween")) {
+                halloween.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("halloween");
+            }
+            if (Method.showQueue.contains("thanksgiving")) {
+                thanksgiving.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("thanksgiving");
+            }
+            if (Method.showQueue.contains("independence")) {
+                independence.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("independence");
+            }
+            if (Method.showQueue.contains("clayton")) {
+                clayton.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("clayton");
+            }
+            if (Method.showQueue.contains("birthday")) {
+                birthday.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("birthday");
+            }
+            if (Method.showQueue.contains("labor")) {
+                labor.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("labor");
+            }
+            if (Method.showQueue.contains("easter")) {
+                easter.setStyle("-fx-background-color: #FFFFFF; ");
+                Method.showQueue.remove("easter");
+            }
         }else if (Method.showQueue.contains("veteran")) {
             veteran.setStyle("-fx-background-color: #FFFFFF; ");
             System.out.println("De-Select Veterans Day");

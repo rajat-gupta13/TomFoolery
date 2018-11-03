@@ -63,6 +63,7 @@ public class Controller implements Initializable {
                     String s= "!dos1:11#";
                     testMethod.SendInstructionToWeigl(s);
                     powerButton.setStyle("-fx-background-color: #66BB6A; ");
+                    testMethod.ResetAllPositions();
                 }
             }, 1 * 2000);
             POWER_ON = true;

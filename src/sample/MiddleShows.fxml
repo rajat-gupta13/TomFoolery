@@ -75,6 +75,16 @@
                </font>
             </Button>
             <Line endX="600.0" layoutX="976.0" layoutY="669.0" startX="-600.0" />
+            <Button id="button" fx:id="danceShort" layoutX="300.0" layoutY="557.0" mnemonicParsing="false" onAction="#PressDancePartyShort" prefHeight="89.0" prefWidth="264.0" stylesheets="@Style.css" text="SHORT" visible="false">
+               <font>
+                  <Font name="Montserrat Regular" size="30.0" />
+               </font>
+            </Button>
+            <Button id="button" fx:id="danceLong" layoutX="680.0" layoutY="557.0" mnemonicParsing="false" onAction="#PressDancePartyLong" prefHeight="89.0" prefWidth="264.0" stylesheets="@Style.css" text="LONG" visible="false">
+               <font>
+                  <Font name="Montserrat Regular" size="30.0" />
+               </font>
+            </Button>
          </children></Pane>
    </children>
 </GridPane>

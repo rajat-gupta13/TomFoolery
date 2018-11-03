@@ -98,9 +98,9 @@ public class DanceParty1 implements Initializable{
                     public void run() {
                         nextDialogue.setVisible(true);
                     }
-                }, 1*2000);
+                }, 1*1000);
             }
-        }, 1*4000);
+        }, 1*2000);
 
     }
 
@@ -163,16 +163,43 @@ public class DanceParty1 implements Initializable{
                 System.out.println("Playing Dance Party Dialogue 6");
                 s = "!vcc1=0!rst13#";
                 testMethod.SendInstructionToWeigl(s);
-                tom5.setVisible(false);
-                tom6.setVisible(true);
-                volunteer5.setVisible(false);
-                volunteer.setVisible(false);
-                timer.schedule(new TimerTask() {
-                    @Override
-                    public void run() {
-                        nextDialogue.setVisible(true);
-                    }
-                }, 1*300000);
+                if (Method.isDancePartyShort && !Method.isDancePartyLong) {
+                    timer.schedule(new TimerTask() {
+                        @Override
+                        public void run() {
+                            String s1 = "!vcc1=0!rst51#";
+                            testMethod.SendInstructionToWeigl(s1);
+                        }
+                    }, 1 * 2496);
+                    tom5.setVisible(false);
+                    tom6.setVisible(true);
+                    volunteer5.setVisible(false);
+                    volunteer.setVisible(false);
+                    timer.schedule(new TimerTask() {
+                        @Override
+                        public void run() {
+                            nextDialogue.setVisible(true);
+                        }
+                    }, 1 * 150000);
+                } else if (Method.isDancePartyLong && !Method.isDancePartyShort) {
+                    timer.schedule(new TimerTask() {
+                        @Override
+                        public void run() {
+                            String s1 = "!vcc1=0!rst52#";
+                            testMethod.SendInstructionToWeigl(s1);
+                        }
+                    }, 1 * 2496);
+                    tom5.setVisible(false);
+                    tom6.setVisible(true);
+                    volunteer5.setVisible(false);
+                    volunteer.setVisible(false);
+                    timer.schedule(new TimerTask() {
+                        @Override
+                        public void run() {
+                            nextDialogue.setVisible(true);
+                        }
+                    }, 1 * 300000);
+                }
                 break;
 
             case 7:
@@ -212,7 +239,7 @@ public class DanceParty1 implements Initializable{
                         String s = "!vcc1=0!rst09#";
                         testMethod.SendInstructionToWeigl(s);
                     }
-                }, 1*1000);
+                }, 1*500);
                 tom1.setVisible(false);
                 tom2.setVisible(true);
                 volunteer1.setVisible(false);
@@ -231,7 +258,7 @@ public class DanceParty1 implements Initializable{
                         String s = "!vcc1=0!rst10#";
                         testMethod.SendInstructionToWeigl(s);
                     }
-                }, 1*1000);
+                }, 1*500);
                 tom2.setVisible(false);
                 tom3.setVisible(true);
                 volunteer2.setVisible(false);
@@ -250,7 +277,7 @@ public class DanceParty1 implements Initializable{
                         String s = "!vcc1=0!rst11#";
                         testMethod.SendInstructionToWeigl(s);
                     }
-                }, 1*1000);
+                }, 1*500);
                 tom3.setVisible(false);
                 tom4.setVisible(true);
                 volunteer3.setVisible(false);
@@ -269,7 +296,7 @@ public class DanceParty1 implements Initializable{
                         String s = "!vcc1=0!rst12#";
                         testMethod.SendInstructionToWeigl(s);
                     }
-                }, 1*1000);
+                }, 1*500);
                 tom4.setVisible(false);
                 tom5.setVisible(true);
                 volunteer4.setVisible(false);
@@ -277,29 +304,6 @@ public class DanceParty1 implements Initializable{
                 volunteer5.setDisable(true);
                 DancePartyDialogue5();
                 break;
-
-            case 6:
-                System.out.println("Playing Dance Party Dialogue 6 with Yes");
-                s = "!vcc1=0!rst26#";
-                testMethod.SendInstructionToWeigl(s);
-                timer.schedule(new TimerTask() {
-                    @Override
-                    public void run() {
-                        String s = "!vcc1=0!rst13#";
-                        testMethod.SendInstructionToWeigl(s);
-                    }
-                }, 1*1000);
-                tom5.setVisible(false);
-                tom6.setVisible(true);
-                volunteer5.setVisible(false);
-                timer.schedule(new TimerTask() {
-                    @Override
-                    public void run() {
-                        nextDialogue.setVisible(true);
-                    }
-                }, 1*300000);
-                break;
-
         }
 
 
@@ -318,7 +322,7 @@ public class DanceParty1 implements Initializable{
                     }
                 }, 1*1000);
             }
-        }, 1*6000);
+        }, 1*12000);
     }
 
     private void DancePartyDialogue5() {
@@ -330,11 +334,10 @@ public class DanceParty1 implements Initializable{
                     @Override
                     public void run() {
                         nextDialogue.setVisible(true);
-                        playAddYes.setVisible(true);
                     }
-                }, 1*2000);
+                }, 1*1000);
             }
-        }, 1*5000);
+        }, 1*9000);
     }
 
     private void DancePartyDialogue3() {
@@ -348,9 +351,9 @@ public class DanceParty1 implements Initializable{
                         nextDialogue.setVisible(true);
                         playAddYes.setVisible(true);
                     }
-                }, 1*2000);
+                }, 1*1001);
             }
-        }, 1*3500);
+        }, 1*6000);
     }
 
     private void DancePartDialogue2() {

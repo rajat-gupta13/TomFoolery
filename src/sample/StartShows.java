@@ -72,7 +72,9 @@ public class StartShows implements Initializable {
     }
 
     public void PressNext(javafx.event.ActionEvent event) throws Exception {
-
+        Method.isDancePartyShort = false;
+        Method.isDancePartyLong = false;
+        Method.isDancePartLoop = false;
         testMethod.ResetAllPositions();
         Parent pageone = FXMLLoader.load(getClass().getResource("MiddleShows.fxml"));
         testMethod.ShowSceneFunction(pageone,event);

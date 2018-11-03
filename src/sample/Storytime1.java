@@ -126,7 +126,7 @@ public class Storytime1 implements Initializable{
                     }
                 }, 1*1000);
             }
-        }, 1*4000);
+        }, 1*5000);
 
     }
 
@@ -157,7 +157,7 @@ public class Storytime1 implements Initializable{
                             }
                         }, 1*1000);
                     }
-                }, 1*4000);
+                }, 1*7000);
                 break;
 
             case 3:
@@ -178,9 +178,9 @@ public class Storytime1 implements Initializable{
                             public void run() {
                                 nextDialogue.setVisible(true);
                             }
-                        }, 1*1000);
+                        }, 1*2000);
                     }
-                }, 1*4000);
+                }, 1*11000);
                 break;
 
             case 4:
@@ -204,7 +204,7 @@ public class Storytime1 implements Initializable{
                             }
                         }, 1*1000);
                     }
-                }, 1*4000);
+                }, 1*11000);
                 break;
 
             case 5:
@@ -238,6 +238,7 @@ public class Storytime1 implements Initializable{
                 tom7.setVisible(true);
                 volunteer.setVisible(true);
                 volunteer6.setVisible(true);
+                volunteer6.setDisable(true);
                 response1.setVisible(false);
                 response2.setVisible(false);
                 response3.setVisible(false);
@@ -252,7 +253,7 @@ public class Storytime1 implements Initializable{
                             }
                         }, 1*1000);
                     }
-                }, 1*4000);
+                }, 1*10000);
                 break;
 
             case 8:
@@ -274,12 +275,12 @@ public class Storytime1 implements Initializable{
                         giggle.setVisible(true);
                         endStorytime.setVisible(true);
                     }
-                }, 1*4000);
+                }, 1*5000);
                 break;
 
             case 9:
                 storytimeEnded.setVisible(false);
-                if (Method.showQueue.element() == "seeyalater") {
+                if (Method.showQueue.contains("seeyalater")) {
                     System.out.println("Playing Storytime Dialogue 9");
                     s = "!vcc1=0!rst30#";
                     testMethod.SendInstructionToWeigl(s);
@@ -290,9 +291,9 @@ public class Storytime1 implements Initializable{
                         public void run() {
                             next.setVisible(true);
                         }
-                    }, 1 * 4000);
+                    }, 1 * 5000);
                 }
-                else  if (Method.showQueue.element() == "goodnight") {
+                else  if (Method.showQueue.contains("goodnight")) {
                     System.out.println("Playing Storytime Dialogue 10");
                     s = "!vcc1=0!rst31#";
                     testMethod.SendInstructionToWeigl(s);
@@ -303,7 +304,7 @@ public class Storytime1 implements Initializable{
                         public void run() {
                             next.setVisible(true);
                         }
-                    }, 1 * 4000);
+                    }, 1 * 7000);
                 }
                 break;
         }
@@ -328,7 +329,7 @@ public class Storytime1 implements Initializable{
                         String s = "!vcc1=0!rst19#";
                         testMethod.SendInstructionToWeigl(s);
                     }
-                }, 1*1000);
+                }, 1*500);
                 tom4.setVisible(false);
                 tom5.setVisible(true);
                 volunteer4.setVisible(false);
@@ -347,7 +348,7 @@ public class Storytime1 implements Initializable{
                         String s = "!vcc1=0!rst20#";
                         testMethod.SendInstructionToWeigl(s);
                     }
-                }, 1*1000);
+                }, 1*500);
                 tom5.setVisible(false);
                 tom6.setVisible(true);
                 volunteer5.setVisible(false);
@@ -381,9 +382,9 @@ public class Storytime1 implements Initializable{
                         nextDialogue.setVisible(true);
                         playAddYes.setVisible(true);
                     }
-                }, 1*2000);
+                }, 1*1001);
             }
-        }, 1*000);
+        }, 1*11000);
     }
 
     private void StorytimeDialogue6() {
@@ -400,7 +401,7 @@ public class Storytime1 implements Initializable{
                     }
                 }, 1*2000);
             }
-        }, 1*8000);
+        }, 1*20000);
     }
 
     public void PressResponse1(javafx.event.ActionEvent event) throws Exception
@@ -483,7 +484,7 @@ public class Storytime1 implements Initializable{
                 response2.setDisable(false);
                 response3.setDisable(false);
             }
-        }, 1*1000);
+        }, 1*1500);
     }
 
     @Override

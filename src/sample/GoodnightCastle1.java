@@ -86,9 +86,9 @@ public class GoodnightCastle1 implements Initializable{
                     public void run() {
                         nextDialogue.setVisible(true);
                     }
-                }, 1*2000);
+                }, 1*1000);
             }
-        }, 1*5000);
+        }, 1*4000);
 
     }
 
@@ -117,7 +117,7 @@ public class GoodnightCastle1 implements Initializable{
                             }
                         }, 1 * 1000);
                     }
-                }, 1 * 1000);
+                }, 1 * 3000);
                 break;
 
             case 3:
@@ -133,7 +133,7 @@ public class GoodnightCastle1 implements Initializable{
                     public void run() {
                         nextDialogue.setVisible(true);
                     }
-                }, 1 * 1000);
+                }, 1 * 7000);
                 break;
 
             case 4:
@@ -147,7 +147,7 @@ public class GoodnightCastle1 implements Initializable{
                     public void run() {
                         nextDialogue.setVisible(true);
                     }
-                }, 1 * 14000);
+                }, 1 * 9000);
                 break;
 
             case 5:
@@ -161,7 +161,7 @@ public class GoodnightCastle1 implements Initializable{
                     public void run() {
                         nextDialogue.setVisible(true);
                     }
-                }, 1 * 16000);
+                }, 1 * 3800);
                 break;
 
             case 6:

@@ -38,7 +38,7 @@ public class ControlFunctions implements Initializable {
         if (!HEAD_TURN_PRESSED) {
             headturn.setStyle("-fx-background-color: #B71C1C; ");
             System.out.println("Stop Head Turn");
-            String s = "!vcc1=0!dmo1:xx0xx#";
+            String s = "!eamxx0xxxxxxxxxxxxx#";
             testMethod.SendInstructionToWeigl(s);
             HEAD_TURN_PRESSED = true;
             testMethod.SavePreferences("HEAD_TURN", true);
@@ -46,7 +46,7 @@ public class ControlFunctions implements Initializable {
         else if (HEAD_TURN_PRESSED) {
             headturn.setStyle("-fx-background-color: #FFFFFF; ");
             System.out.println("Start Head Turn");
-            String s = "!vcc1=0!dmo1:xx1xx#";
+            String s = "!eamxx1xxxxxxxxxxxxx#";
             testMethod.SendInstructionToWeigl(s);
             HEAD_TURN_PRESSED = false;
             testMethod.SavePreferences("HEAD_TURN", false);
@@ -57,7 +57,7 @@ public class ControlFunctions implements Initializable {
        if (!HEAD_TILT_PRESSED) {
            headtilt.setStyle("-fx-background-color: #B71C1C; ");
            System.out.println("Stop Head tilt");
-           String s = "!vcc1=0!dmo1:x0xxx#";
+           String s = "!eamx0xxxxxxxxxxxxxx#";
            testMethod.SendInstructionToWeigl(s);
            HEAD_TILT_PRESSED = true;
            testMethod.SavePreferences("HEAD_TILT", true);
@@ -65,7 +65,7 @@ public class ControlFunctions implements Initializable {
        else if (HEAD_TILT_PRESSED) {
            headtilt.setStyle("-fx-background-color: #FFFFFF; ");
            System.out.println("Start Head tilt");
-           String s = "!vcc1=0!dmo1:x1xxx#";
+           String s = "!eamx1xxxxxxxxxxxxxx#";
            testMethod.SendInstructionToWeigl(s);
            HEAD_TILT_PRESSED = false;
            testMethod.SavePreferences("HEAD_TILT", false);
@@ -76,7 +76,7 @@ public class ControlFunctions implements Initializable {
         if (!TORSO_PRESSED) {
             torso.setStyle("-fx-background-color: #B71C1C; ");
             System.out.println("Stop Torso Bend");
-            String s = "!vcc1=0!dmo1:xxxx0#";
+            String s = "!eamxxxx0xxxxxxxxxxx#";
             testMethod.SendInstructionToWeigl(s);
             TORSO_PRESSED = true;
             testMethod.SavePreferences("TORSO", true);
@@ -84,7 +84,7 @@ public class ControlFunctions implements Initializable {
         else if (TORSO_PRESSED) {
             torso.setStyle("-fx-background-color: #FFFFFF; ");
             System.out.println("Start Torso Bend");
-            String s = "!vcc1=0!dmo1:xxxx1#";
+            String s = "!eamxxxx1xxxxxxxxxxx#";
             testMethod.SendInstructionToWeigl(s);
             TORSO_PRESSED = false;
             testMethod.SavePreferences("TORSO", false);
@@ -95,7 +95,7 @@ public class ControlFunctions implements Initializable {
         if (!MOUTH_PRESSED) {
             mouth.setStyle("-fx-background-color: #B71C1C; ");
             System.out.println("Stop Mouth");
-            String s = "!vcc1=0!dmo1:0xxxx#";
+            String s = "!eam0xxxxxxxxxxxxxxx#";
             testMethod.SendInstructionToWeigl(s);
             MOUTH_PRESSED = true;
             testMethod.SavePreferences("MOUTH", true);
@@ -103,7 +103,7 @@ public class ControlFunctions implements Initializable {
         else if (MOUTH_PRESSED) {
             mouth.setStyle("-fx-background-color: #FFFFFF; ");
             System.out.println("Start Mouth");
-            String s = "!vcc1=0!dmo1:1xxxx#";
+            String s = "!eam1xxxxxxxxxxxxxxx#";
             testMethod.SendInstructionToWeigl(s);
             MOUTH_PRESSED = false;
             testMethod.SavePreferences("MOUTH", false);
@@ -113,7 +113,7 @@ public class ControlFunctions implements Initializable {
         if (!SCEPTER_PRESSED) {
             scepter.setStyle("-fx-background-color: #B71C1C; ");
             System.out.println("Stop Scepter");
-            String s = "!vcc1=0!dmo1:xxx0x#";
+            String s = "!eamxxx0xxxxxxxxxxxx#";
             testMethod.SendInstructionToWeigl(s);
             SCEPTER_PRESSED = true;
             testMethod.SavePreferences("SCEPTER", true);
@@ -121,7 +121,7 @@ public class ControlFunctions implements Initializable {
         else if (SCEPTER_PRESSED) {
             scepter.setStyle("-fx-background-color: #FFFFFF; ");
             System.out.println("Start Scepter");
-            String s = "!vcc1=0!dmo1:xxx1x#";
+            String s = "!eamxxx1xxxxxxxxxxxx#";
             testMethod.SendInstructionToWeigl(s);
             SCEPTER_PRESSED = false;
             testMethod.SavePreferences("SCEPTER", false);

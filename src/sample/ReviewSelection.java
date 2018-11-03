@@ -21,24 +21,7 @@ public class ReviewSelection implements Initializable {
     private Label show4;
     @FXML
     private Label show5;
-    @FXML
-    private Label show6;
-    @FXML
-    private Label show7;
-    @FXML
-    private Label show8;
-    @FXML
-    private Label show9;
-    @FXML
-    private Label show10;
-    @FXML
-    private Label show11;
-    @FXML
-    private Label show12;
-    @FXML
-    private Label show13;
-    @FXML
-    private Label show14;
+
 
     private Method testMethod = new Method();
     Object showArray[]= Method.showQueue.toArray();
@@ -93,33 +76,6 @@ public class ReviewSelection implements Initializable {
                 case 4:
                     show5.setText("5. "+ ShowLabel(i));
                     break;
-                case 5:
-                    show6.setText("6. "+ ShowLabel(i));
-                    break;
-                case 6:
-                    show7.setText("7. "+ ShowLabel(i));
-                    break;
-                case 7:
-                    show8.setText("8. "+ ShowLabel(i));
-                    break;
-                case 8:
-                    show9.setText("9. "+ ShowLabel(i));
-                    break;
-                case 9:
-                    show10.setText("10. "+ ShowLabel(i));
-                    break;
-                case 10:
-                    show11.setText("11. "+ ShowLabel(i));
-                    break;
-                case 11:
-                    show12.setText("12. "+ ShowLabel(i));
-                    break;
-                case 12:
-                    show13.setText("13. "+ ShowLabel(i));
-                    break;
-                case 13:
-                    show14.setText("14. "+ ShowLabel(i));
-                    break;
             }
         }
         if (queueLength != 14)
@@ -132,104 +88,15 @@ public class ReviewSelection implements Initializable {
                        show3.setVisible(false);
                        show4.setVisible(false);
                        show5.setVisible(false);
-                       show6.setVisible(false);
-                       show7.setVisible(false);
-                       show8.setVisible(false);
-                       show9.setVisible(false);
-                       show10.setVisible(false);
-                       show11.setVisible(false);
-                       show12.setVisible(false);
-                       show13.setVisible(false);
-                       show14.setVisible(false);
                        break;
                    case 3:
                        show4.setVisible(false);
                        show5.setVisible(false);
-                       show6.setVisible(false);
-                       show7.setVisible(false);
-                       show8.setVisible(false);
-                       show9.setVisible(false);
-                       show10.setVisible(false);
-                       show11.setVisible(false);
-                       show12.setVisible(false);
-                       show13.setVisible(false);
-                       show14.setVisible(false);
                        break;
                    case 4:
                        show5.setVisible(false);
-                       show6.setVisible(false);
-                       show7.setVisible(false);
-                       show8.setVisible(false);
-                       show9.setVisible(false);
-                       show10.setVisible(false);
-                       show11.setVisible(false);
-                       show12.setVisible(false);
-                       show13.setVisible(false);
-                       show14.setVisible(false);
                        break;
-                   case 5:
-                       show6.setVisible(false);
-                       show7.setVisible(false);
-                       show8.setVisible(false);
-                       show9.setVisible(false);
-                       show10.setVisible(false);
-                       show11.setVisible(false);
-                       show12.setVisible(false);
-                       show13.setVisible(false);
-                       show14.setVisible(false);
-                       break;
-                   case 6:
-                       show7.setVisible(false);
-                       show8.setVisible(false);
-                       show9.setVisible(false);
-                       show10.setVisible(false);
-                       show11.setVisible(false);
-                       show12.setVisible(false);
-                       show13.setVisible(false);
-                       show14.setVisible(false);
-                       break;
-                   case 7:
-                       show8.setVisible(false);
-                       show9.setVisible(false);
-                       show10.setVisible(false);
-                       show11.setVisible(false);
-                       show12.setVisible(false);
-                       show13.setVisible(false);
-                       show14.setVisible(false);
-                       break;
-                   case 8:
-                       show9.setVisible(false);
-                       show10.setVisible(false);
-                       show11.setVisible(false);
-                       show12.setVisible(false);
-                       show13.setVisible(false);
-                       show14.setVisible(false);
-                       break;
-                   case 9:
-                       show10.setVisible(false);
-                       show11.setVisible(false);
-                       show12.setVisible(false);
-                       show13.setVisible(false);
-                       show14.setVisible(false);
-                       break;
-                   case 10:
-                       show11.setVisible(false);
-                       show12.setVisible(false);
-                       show13.setVisible(false);
-                       show14.setVisible(false);
-                       break;
-                   case 11:
-                       show12.setVisible(false);
-                       show13.setVisible(false);
-                       show14.setVisible(false);
-                       break;
-                   case 12:
-                       show13.setVisible(false);
-                       show14.setVisible(false);
-                       break;
-                   case 13:
-                       show14.setVisible(false);
-                       break;
+
                }
             }
         }

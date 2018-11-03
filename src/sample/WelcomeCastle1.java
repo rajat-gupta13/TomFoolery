@@ -92,9 +92,9 @@ public class WelcomeCastle1 implements Initializable {
                     public void run() {
                         nextDialogue.setVisible(true);
                     }
-                }, 1*5000);
+                }, 1*2000);
             }
-        }, 1*16000);
+        }, 1*21000);
 
     }
 
@@ -122,9 +122,9 @@ public class WelcomeCastle1 implements Initializable {
                             public void run() {
                                 nextDialogue.setVisible(true);
                             }
-                        }, 1*3000);
+                        }, 1*1000);
                     }
-                }, 1*6000);
+                }, 1*7000);
                 break;
 
             case 3:
@@ -145,9 +145,9 @@ public class WelcomeCastle1 implements Initializable {
                             public void run() {
                                 nextDialogue.setVisible(true);
                             }
-                        }, 1*3000);
+                        }, 1*1000);
                     }
-                }, 1*14000);
+                }, 1*15000);
                 break;
 
             case 4:
@@ -168,7 +168,7 @@ public class WelcomeCastle1 implements Initializable {
                             public void run() {
                                 nextDialogue.setVisible(true);
                             }
-                        }, 1*4000);
+                        }, 1*2000);
                     }
                 }, 1*6000);
                 break;
@@ -191,9 +191,9 @@ public class WelcomeCastle1 implements Initializable {
                             public void run() {
                                 nextDialogue.setVisible(true);
                             }
-                        }, 1*3000);
+                        }, 1*1000);
                     }
-                }, 1*8000);
+                }, 1*9000);
                 break;
 
             case 6:
@@ -214,9 +214,9 @@ public class WelcomeCastle1 implements Initializable {
                             public void run() {
                                 nextDialogue.setVisible(true);
                             }
-                        }, 1*3000);
+                        }, 1*1000);
                     }
-                }, 1*5000);
+                }, 1*4000);
                 break;
 
             case 7:
@@ -232,7 +232,7 @@ public class WelcomeCastle1 implements Initializable {
                     public void run() {
                         next.setVisible(true);
                     }
-                }, 1*6000);
+                }, 1*7000);
                 break;
         }
 

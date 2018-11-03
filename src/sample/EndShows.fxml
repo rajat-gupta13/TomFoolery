@@ -23,7 +23,17 @@
                   <Font name="Montserrat Bold" size="64.0" />
                </font>
             </Label>
-            <Label layoutX="624.0" layoutY="185.0" text="Choose an End show">
+            <Label layoutX="609.0" layoutY="185.0" text="Choose an">
+               <font>
+                  <Font name="Montserrat Regular" size="64.0" />
+               </font>
+            </Label>
+            <Label layoutX="958.0" layoutY="180.0" text="END" textFill="#fffb00">
+               <font>
+                  <Font name="Montserrat Bold" size="72.0" />
+               </font>
+            </Label>
+            <Label layoutX="1138.0" layoutY="185.0" text="show">
                <font>
                   <Font name="Montserrat Regular" size="64.0" />
                </font>

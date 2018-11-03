@@ -19,6 +19,12 @@ public class MiddleShows implements Initializable {
     private Button dance;
     @FXML
     private Button story;
+    @FXML
+    private Button danceShort;
+    @FXML
+    private Button danceLong;
+
+    private boolean danceOpen = false;
 
     Method testMethod = new Method();
 
@@ -30,6 +36,13 @@ public class MiddleShows implements Initializable {
     private void CheckStatus() {
         if (Method.showQueue.contains("dance")) {
             dance.setStyle("-fx-background-color: #66BB6A; ");
+            if (Method.isDancePartyShort && !Method.isDancePartyLong)
+            {
+                danceShort.setStyle("-fx-background-color: #66BB6A; ");
+            }else if (!Method.isDancePartyShort && Method.isDancePartyLong)
+            {
+                danceLong.setStyle("-fx-background-color: #66BB6A; ");
+            }
         }
         if (Method.showQueue.contains("story")) {
             story.setStyle("-fx-background-color: #66BB6A; ");
@@ -44,6 +57,9 @@ public class MiddleShows implements Initializable {
             dance.setStyle("-fx-background-color: #FFFFFF; ");
             System.out.println("De-Select Dance");
             Method.showQueue.remove("dance");
+            Method.isDancePartyShort = false;
+            Method.isDancePartyLong = false;
+            Method.isDancePartLoop = false;
         }
         if (Method.showQueue.contains("story")){
             story.setStyle("-fx-background-color: #FFFFFF; ");
@@ -61,15 +77,77 @@ public class MiddleShows implements Initializable {
 
     public void PressDanceParty(javafx.event.ActionEvent event) throws Exception {
 
-        if (!Method.showQueue.contains("dance"))
+        if (!danceOpen) {
+            danceShort.setVisible(true);
+            danceLong.setVisible(true);
+            danceOpen = true;
+        }
+        else if (danceOpen) {
+            danceShort.setVisible(false);
+            danceLong.setVisible(false);
+            danceOpen = false;
+        }
+    }
+
+    public void PressDancePartyShort(javafx.event.ActionEvent event) throws Exception {
+
+        if (!Method.showQueue.contains("dance") && !Method.isDancePartyShort && !Method.isDancePartyLong && !Method.isDancePartLoop)
         {
             dance.setStyle("-fx-background-color: #66BB6A; ");
-            System.out.println("Select Dance");
+            danceShort.setStyle("-fx-background-color: #66BB6A; ");
+            System.out.println("Select Dance Short");
             Method.showQueue.add("dance");
-        }else if (Method.showQueue.contains("dance")) {
+            Method.isDancePartyShort = true;
+            Method.isDancePartyLong = false;
+            Method.isDancePartLoop = false;
+        }else if (Method.showQueue.contains("dance") && Method.isDancePartyShort && !Method.isDancePartyLong && !Method.isDancePartLoop) {
             dance.setStyle("-fx-background-color: #FFFFFF; ");
-            System.out.println("De-Select Dance");
+            danceShort.setStyle("-fx-background-color: #FFFFFF; ");
+            System.out.println("De-Select Dance Short");
             Method.showQueue.remove("dance");
+            Method.isDancePartyShort = false;
+            Method.isDancePartyLong = false;
+            Method.isDancePartLoop = false;
+        } else if (Method.showQueue.contains("dance") && Method.isDancePartyLong && !Method.isDancePartyShort && !Method.isDancePartLoop) {
+            danceShort.setStyle("-fx-background-color: #66BB6A; ");
+            danceLong.setStyle("-fx-background-color: #FFFFFF; ");
+            System.out.println("Select Dance Short");
+            Method.isDancePartyShort = true;
+            Method.isDancePartyLong = false;
+            Method.isDancePartLoop = false;
+        }
+        System.out.println(Method.showQueue);
+        String s="!vcc1=0!rst901#";
+        testMethod.SendInstructionToWeigl(s);
+    }
+
+
+    public void PressDancePartyLong(javafx.event.ActionEvent event) throws Exception {
+
+        if (!Method.showQueue.contains("dance") && !Method.isDancePartyShort && !Method.isDancePartyLong && !Method.isDancePartLoop)
+        {
+            dance.setStyle("-fx-background-color: #66BB6A; ");
+            danceLong.setStyle("-fx-background-color: #66BB6A; ");
+            System.out.println("Select Dance Long");
+            Method.showQueue.add("dance");
+            Method.isDancePartyShort = false;
+            Method.isDancePartyLong = true;
+            Method.isDancePartLoop = false;
+        }else if (Method.showQueue.contains("dance") && !Method.isDancePartyShort && Method.isDancePartyLong && !Method.isDancePartLoop) {
+            dance.setStyle("-fx-background-color: #FFFFFF; ");
+            danceLong.setStyle("-fx-background-color: #FFFFFF; ");
+            System.out.println("De-Select Dance Long");
+            Method.showQueue.remove("dance");
+            Method.isDancePartyShort = false;
+            Method.isDancePartyLong = false;
+            Method.isDancePartLoop = false;
+        } else if (Method.showQueue.contains("dance") && Method.isDancePartyShort && !Method.isDancePartyLong && !Method.isDancePartLoop) {
+            danceLong.setStyle("-fx-background-color: #66BB6A; ");
+            danceShort.setStyle("-fx-background-color: #FFFFFF; ");
+            System.out.println("Select Dance Long");
+            Method.isDancePartyShort = false;
+            Method.isDancePartyLong = true;
+            Method.isDancePartLoop = false;
         }
         System.out.println(Method.showQueue);
         String s="!vcc1=0!rst901#";
@@ -103,6 +181,9 @@ public class MiddleShows implements Initializable {
     {
         testMethod.PressMainMenuFunction(event);
         Method.showQueue.clear();
+        Method.isDancePartyShort = false;
+        Method.isDancePartyLong = false;
+        Method.isDancePartLoop = false;
     }
 
     @Override
