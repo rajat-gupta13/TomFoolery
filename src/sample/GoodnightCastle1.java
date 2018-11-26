@@ -65,11 +65,16 @@ public class GoodnightCastle1 implements Initializable{
 
     public void PressStartShow(javafx.event.ActionEvent event) throws IOException
     {
+        testMethod.ResetAllPositions(1.5f);
+        startShow.setVisible(false);
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
         System.out.println("Playing Goodnight Castle Dialogue 1");
-        String s = "!vcc1=0!rst32#";
+        String s = "!vcc1=0!rst31#";
         testMethod.SendInstructionToWeigl(s);
         dialogueCount++;
-        startShow.setVisible(false);
+
         volunteerFirst.setVisible(false);
         volunteerFirstDialogue.setVisible(false);
         tom.setVisible(true);
@@ -88,96 +93,106 @@ public class GoodnightCastle1 implements Initializable{
                     }
                 }, 1*1000);
             }
-        }, 1*4000);
-
+        }, 1*4500);
+            }
+        }, 1*1500);
     }
 
     public void PressNextDialogue(javafx.event.ActionEvent event) throws IOException
     {
+        testMethod.ResetAllPositions(1.5f);
         dialogueCount++;
         nextDialogue.setVisible(false);
-        switch (dialogueCount) {
-            case 2:
-                System.out.println("Playing Goodnight Castle Dialogue 2");
-                String s = "!vcc1=0!rst33#";
-                testMethod.SendInstructionToWeigl(s);
-                tom1.setVisible(false);
-                tom2.setVisible(true);
-                volunteer1.setVisible(false);
-                volunteer2.setVisible(true);
-                volunteer2.setDisable(true);
-                timer.schedule(new TimerTask() {
-                    @Override
-                    public void run() {
-                        volunteer2.setDisable(false);
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                switch (dialogueCount) {
+                    case 2:
+                        System.out.println("Playing Goodnight Castle Dialogue 2");
+                        String s = "!vcc1=0!rst32#";
+                        testMethod.SendInstructionToWeigl(s);
+                        tom1.setVisible(false);
+                        tom2.setVisible(true);
+                        volunteer1.setVisible(false);
+                        volunteer2.setVisible(true);
+                        volunteer2.setDisable(true);
+                        timer.schedule(new TimerTask() {
+                            @Override
+                            public void run() {
+                                volunteer2.setDisable(false);
+                                timer.schedule(new TimerTask() {
+                                    @Override
+                                    public void run() {
+                                        nextDialogue.setVisible(true);
+                                    }
+                                }, 1 * 1400);
+                            }
+                        }, 1 * 3700);
+                        break;
+
+                    case 3:
+                        System.out.println("Playing Goodnight Castle Dialogue 3");
+                        s = "!vcc1=0!rst33#";
+                        testMethod.SendInstructionToWeigl(s);
+                        tom2.setVisible(false);
+                        tom3.setVisible(true);
+                        volunteer2.setVisible(false);
+                        volunteer.setVisible(false);
                         timer.schedule(new TimerTask() {
                             @Override
                             public void run() {
                                 nextDialogue.setVisible(true);
                             }
-                        }, 1 * 1000);
-                    }
-                }, 1 * 3000);
-                break;
+                        }, 1 * 7500);
+                        break;
 
-            case 3:
-                System.out.println("Playing Goodnight Castle Dialogue 3");
-                s = "!vcc1=0!rst34#";
-                testMethod.SendInstructionToWeigl(s);
-                tom2.setVisible(false);
-                tom3.setVisible(true);
-                volunteer2.setVisible(false);
-                volunteer.setVisible(false);
-                timer.schedule(new TimerTask() {
-                    @Override
-                    public void run() {
-                        nextDialogue.setVisible(true);
-                    }
-                }, 1 * 7000);
-                break;
+                    case 4:
+                        System.out.println("Playing Goodnight Castle Dialogue 4");
+                        s = "!vcc1=0!rst34#";
+                        testMethod.SendInstructionToWeigl(s);
+                        tom3.setVisible(false);
+                        tom4.setVisible(true);
+                        timer.schedule(new TimerTask() {
+                            @Override
+                            public void run() {
+                                nextDialogue.setVisible(true);
+                            }
+                        }, 1 * 9400);
+                        break;
 
-            case 4:
-                System.out.println("Playing Goodnight Castle Dialogue 4");
-                s = "!vcc1=0!rst35#";
-                testMethod.SendInstructionToWeigl(s);
-                tom3.setVisible(false);
-                tom4.setVisible(true);
-                timer.schedule(new TimerTask() {
-                    @Override
-                    public void run() {
-                        nextDialogue.setVisible(true);
-                    }
-                }, 1 * 9000);
-                break;
-
-            case 5:
-                System.out.println("Playing Goodnight Castle Dialogue 5");
-                s = "!vcc1=0!rst36#";
-                testMethod.SendInstructionToWeigl(s);
-                tom4.setVisible(false);
-                tom5.setVisible(true);
-                timer.schedule(new TimerTask() {
-                    @Override
-                    public void run() {
-                        nextDialogue.setVisible(true);
-                    }
-                }, 1 * 3800);
-                break;
-
-            case 6:
-                System.out.println("Playing Goodnight Castle Dialogue 6");
-                s = "!vcc1=0!rst37#";
-                testMethod.SendInstructionToWeigl(s);
-                tom5.setVisible(false);
-                tom6.setVisible(true);
-                timer.schedule(new TimerTask() {
-                    @Override
-                    public void run() {
-                        endShow.setVisible(true);
-                    }
-                }, 1 * 16000);
-                break;
-
-        }
+                    case 5:
+                        System.out.println("Playing Goodnight Castle Dialogue 5");
+                        s = "!vcc1=0!rst35#";
+                        testMethod.SendInstructionToWeigl(s);
+                        tom4.setVisible(false);
+                        tom5.setVisible(true);
+                        timer.schedule(new TimerTask() {
+                            @Override
+                            public void run() {
+                                System.out.println("Playing Goodnight Castle Dialogue 6");
+                                String s2 = "!vcc1=0!rst36#";
+                                testMethod.SendInstructionToWeigl(s2);
+                                tom5.setVisible(false);
+                                tom6.setVisible(true);
+                                timer.schedule(new TimerTask() {
+                                    @Override
+                                    public void run() {
+                                        System.out.println("Playing Goodnight Castle Dialogue 7");
+                                        String s1 = "!vcc1=0!rst37#";
+                                        testMethod.SendInstructionToWeigl(s1);
+                                        timer.schedule(new TimerTask() {
+                                            @Override
+                                            public void run() {
+                                                endShow.setVisible(true);
+                                            }
+                                        }, 1 * 150000);
+                                    }
+                                }, 1 * 3000);
+                            }
+                        }, 1 * 5200);
+                        break;
+                }
+            }
+        }, 1 * 1500);
     }
 }

@@ -65,9 +65,9 @@ public class ThankYouSponsors implements Initializable{
 
     public void PressBack(javafx.event.ActionEvent event) throws IOException
     {
-        testMethod.ResetAllPositions();
+        testMethod.ResetAllPositions(3);
         Parent pageone = FXMLLoader.load(getClass().getResource("AdminPanel.fxml"));
-        testMethod.ShowSceneFunction(pageone,event);
+        testMethod.ShowSceneFunction(pageone, event);
     }
 
     public void PressStartShow(javafx.event.ActionEvent event) throws IOException
@@ -93,81 +93,92 @@ public class ThankYouSponsors implements Initializable{
                     public void run() {
                         nextDialogue.setVisible(true);
                     }
-                }, 1*2000);
+                }, 1*500);
             }
-        }, 1*5000);
+        }, 1*13000);
 
     }
 
     public void PressNextDialogue(javafx.event.ActionEvent event) throws IOException
     {
+        testMethod.ResetAllPositions(1.5f);
         dialogueCount++;
         nextDialogue.setVisible(false);
-        switch (dialogueCount) {
-            case 2:
-                System.out.println("Playing Thank You Sponsors Dialogue 2");
-                String s = "!vcc1=0!rst152#";
-                testMethod.SendInstructionToWeigl(s);
-                tom1.setVisible(false);
-                tom2.setVisible(true);
-                volunteer1.setVisible(false);
-                volunteer2.setVisible(true);
-                volunteer2.setDisable(true);
-                timer.schedule(new TimerTask() {
-                    @Override
-                    public void run() {
-                        volunteer2.setDisable(false);
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                switch (dialogueCount) {
+                    case 2:
+                        System.out.println("Playing Thank You Sponsors Dialogue 2");
+                        String s = "!vcc1=0!rst152#";
+                        testMethod.SendInstructionToWeigl(s);
+                        tom1.setVisible(false);
+                        tom2.setVisible(true);
+                        volunteer1.setVisible(false);
+                        volunteer2.setVisible(true);
+                        volunteer2.setDisable(true);
                         timer.schedule(new TimerTask() {
                             @Override
                             public void run() {
-                                nextDialogue.setVisible(true);
+                                volunteer2.setDisable(false);
+                                timer.schedule(new TimerTask() {
+                                    @Override
+                                    public void run() {
+                                        nextDialogue.setVisible(true);
+                                    }
+                                }, 1 * 1000);
                             }
-                        }, 1 * 1000);
-                    }
-                }, 1 * 1000);
-                break;
+                        }, 1 * 15500);
+                        break;
 
-            case 3:
-                System.out.println("Playing Thank You Sponsors Dialogue 3");
-                s = "!vcc1=0!rst153#";
-                testMethod.SendInstructionToWeigl(s);
-                tom2.setVisible(false);
-                tom3.setVisible(true);
-                volunteer2.setVisible(false);
-                volunteer3.setVisible(true);
-                volunteer3.setDisable(true);
-                timer.schedule(new TimerTask() {
-                    @Override
-                    public void run() {
-                        volunteer3.setDisable(false);
-                        nextDialogue.setVisible(true);
-                    }
-                }, 1 * 1000);
-                break;
-
-            case 4:
-                System.out.println("Playing Thank You Sponsors Dialogue 4");
-                s = "!vcc1=0!rst154#";
-                testMethod.SendInstructionToWeigl(s);
-                tom3.setVisible(false);
-                tom4.setVisible(true);
-                volunteer3.setVisible(false);
-                volunteer4.setVisible(true);
-                volunteer4.setDisable(true);
-                timer.schedule(new TimerTask() {
-                    @Override
-                    public void run() {
-                        volunteer4.setDisable(false);
+                    case 3:
+                        System.out.println("Playing Thank You Sponsors Dialogue 3");
+                        s = "!vcc1=0!rst153#";
+                        testMethod.SendInstructionToWeigl(s);
+                        tom2.setVisible(false);
+                        tom3.setVisible(true);
+                        volunteer2.setVisible(false);
+                        volunteer3.setVisible(true);
+                        volunteer3.setDisable(true);
                         timer.schedule(new TimerTask() {
                             @Override
                             public void run() {
-                                endShow.setVisible(true);
+                                volunteer3.setDisable(false);
+                                timer.schedule(new TimerTask() {
+                                    @Override
+                                    public void run() {
+                                    nextDialogue.setVisible(true);
+                                    }
+                                }, 1 * 500);
                             }
-                        }, 1 * 2000);
-                    }
-                }, 1 * 14000);
-                break;
+                        }, 1 * 25000);
+                        break;
 
-        }
+                    case 4:
+                        System.out.println("Playing Thank You Sponsors Dialogue 4");
+                        s = "!vcc1=0!rst154#";
+                        testMethod.SendInstructionToWeigl(s);
+                        tom3.setVisible(false);
+                        tom4.setVisible(true);
+                        volunteer3.setVisible(false);
+                        volunteer4.setVisible(true);
+                        volunteer4.setDisable(true);
+                        timer.schedule(new TimerTask() {
+                            @Override
+                            public void run() {
+                                volunteer4.setDisable(false);
+                                timer.schedule(new TimerTask() {
+                                    @Override
+                                    public void run() {
+                                        endShow.setVisible(true);
+                                    }
+                                }, 1 * 1000);
+                            }
+                        }, 1 * 4000);
+                        break;
+
+                }
+            }
+        }, 1*1500);
     }
 }

@@ -21,7 +21,8 @@ public class Method {
 
     public static boolean isDancePartyLong = false;
     public static boolean isDancePartyShort = false;
-    public static boolean isDancePartLoop = false;
+    public static boolean isDancePartyChristmas = false;
+    public static boolean isDancePartyLoop = false;
 
     public Method()throws Exception
     {
@@ -41,20 +42,33 @@ public class Method {
         }
     }
 
-    public void ResetAllPositions()
+    public String ReceiveInstructionsFromWeigl(String s)
     {
-        System.out.println("Resetting all to Middle in 3.5 seconds");
+        try {
+            byte[] buf = new byte[2048];
+            DatagramPacket packet = new DatagramPacket(buf, buf.length);
+            socket.receive(packet);
+            return new String(packet.getData());
+        } catch (Exception e) {
+            System.out.println("Handle exception here......");
+        }
+        return null;
+    }
+
+    public void ResetAllPositions(float fadeTime)
+    {
+        System.out.println("Resetting all to Middle in "+fadeTime+" seconds");
         String s="!rse0#";
         SendInstructionToWeigl(s);
-        s="!dfl1:1%50<3.5#";
+        s="!dfl1:1%50<"+fadeTime+"#";
         SendInstructionToWeigl(s);
-        s="!dfl1:2%55<3.5#";
+        s="!dfl1:2%55<"+fadeTime+"#";
         SendInstructionToWeigl(s);
-        s="!dfl1:3%50<3.5#";
+        s="!dfl1:3%50<"+fadeTime+"#";
         SendInstructionToWeigl(s);
-        s="!dfl1:4%60<3.5#";
+        s="!dfl1:4%60<"+fadeTime+"#";
         SendInstructionToWeigl(s);
-        s="!dfl1:5%60<3.5#";
+        s="!dfl1:5%60<"+fadeTime+"#";
         SendInstructionToWeigl(s);
 
     }
@@ -85,7 +99,7 @@ public class Method {
     public void PressMainMenuFunction(javafx.event.ActionEvent event) throws IOException
     {
         System.out.println("Returning to Main Menu");
-        ResetAllPositions();
+        ResetAllPositions(3);
         Parent pageone = FXMLLoader.load(getClass().getResource("sample.fxml"));
         ShowSceneFunction(pageone, event);
     }
@@ -158,6 +172,10 @@ public class Method {
                 case "labor":
                     showQueue.remove();
                     return "LaborDay";
+
+                case "opening":
+                    showQueue.remove();
+                    return "OpeningCeremony";
             }
         }
         return null;

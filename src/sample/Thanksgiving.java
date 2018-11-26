@@ -37,25 +37,30 @@ public class Thanksgiving {
 
     public void PressNext(javafx.event.ActionEvent event) throws Exception
     {
-        testMethod.ResetAllPositions();
+        testMethod.ResetAllPositions(1.5f);
         Parent pageone = FXMLLoader.load(getClass().getResource(testMethod.ShowSelector() +".fxml"));
-        testMethod.ShowSceneFunction(pageone,event);
+        testMethod.ShowSceneFunction(pageone, event);
     }
 
     public void PressStartShow(javafx.event.ActionEvent event) throws IOException
     {
-        System.out.println("Playing Thanksgiving Dialogue");
-        String s = "!vcc1=0!rst179#";
-        testMethod.SendInstructionToWeigl(s);
         startShow.setVisible(false);
-        tom.setVisible(true);
-        tom1.setVisible(true);
+        testMethod.ResetAllPositions(1.5f);
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
-                next.setVisible(true);
+                System.out.println("Playing Thanksgiving Dialogue");
+                String s = "!vcc1=0!rst179#";
+                testMethod.SendInstructionToWeigl(s);
+                tom.setVisible(true);
+                tom1.setVisible(true);
+                timer.schedule(new TimerTask() {
+                    @Override
+                    public void run() {
+                        next.setVisible(true);
+                    }
+                }, 1 * 15000);
             }
-        }, 1*5000);
-
+        }, 1*1500);
     }
 }

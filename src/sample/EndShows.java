@@ -6,6 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.control.Button;
 
 import java.io.IOException;
+import java.util.TimerTask;
 
 public class EndShows {
     @FXML
@@ -14,6 +15,8 @@ public class EndShows {
     private Button seeyalater;
     @FXML
     private Button next;
+    @FXML
+    private Button opening;
 
     Method testMethod = new Method();
     private boolean choiceMade = false;
@@ -55,9 +58,27 @@ public class EndShows {
         next.setDisable(false);
     }
 
+    public void PressOpeningCeremony(javafx.event.ActionEvent event) throws IOException
+    {
+        seeyalater.setStyle("-fx-background-color: #FFFFFF; ");
+        goodnight.setStyle("-fx-background-color: #FFFFFF; ");
+        opening.setStyle("-fx-background-color: #66BB6A; ");
+        System.out.println("Press Opening Ceremony");
+        Method.showQueue.add("opening");
+        choiceMade = true;
+        if (choiceMade) {
+            Method.showQueue.remove("goodnight");
+            Method.showQueue.remove("seeyalater");
+        }
+        System.out.println(Method.showQueue);
+        String s="!vcc1=0!rst901#";
+        testMethod.SendInstructionToWeigl(s);
+        next.setDisable(false);
+    }
+
     public void PressNext(javafx.event.ActionEvent event) throws Exception {
 
-        testMethod.ResetAllPositions();
+        testMethod.ResetAllPositions(3);
         Parent pageone = FXMLLoader.load(getClass().getResource("ReviewSelection.fxml"));
         testMethod.ShowSceneFunction(pageone,event);
 
@@ -65,7 +86,7 @@ public class EndShows {
 
     public void PressBack(javafx.event.ActionEvent event) throws IOException
     {
-        testMethod.ResetAllPositions();
+        testMethod.ResetAllPositions(3);
         Parent pageone = FXMLLoader.load(getClass().getResource("MiddleShows.fxml"));
         testMethod.ShowSceneFunction(pageone,event);
     }

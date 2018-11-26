@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MagicTrick1">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MagicTrick1">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
   </columnConstraints>
@@ -18,99 +18,99 @@
    <children>
       <Pane id="pane" prefHeight="1080.0" prefWidth="1920.0" stylesheets="@Style.css">
          <children>
-            <Label layoutX="736.0" layoutY="65.0" text="MAGIC TRICK">
+            <Label layoutX="739.0" layoutY="66.0" text="MAGIC TRICK">
                <font>
-                  <Font name="Montserrat Bold" size="64.0" />
+                  <Font name="Calibri Bold" size="80.0" />
                </font>
             </Label>
             <Button id="button" fx:id="startShow" layoutX="810.0" layoutY="461.0" mnemonicParsing="false" onAction="#PressStartShow" prefHeight="79.0" prefWidth="300.0" stylesheets="@Style.css" text="START SHOW">
                <font>
-                  <Font name="Montserrat Regular" size="30.0" />
+                  <Font name="Calibri" size="30.0" />
                </font>
             </Button>
             <Button id="button" layoutX="1647.0" layoutY="26.0" mnemonicParsing="false" onAction="#PressMainMenu" prefHeight="79.0" prefWidth="242.0" stylesheets="@Style.css" text="MAIN MENU">
                <font>
-                  <Font name="Montserrat Regular" size="30.0" />
+                  <Font name="Calibri" size="30.0" />
                </font>
             </Button>
-            <Label fx:id="tom" layoutX="916.0" layoutY="264.0" text="TOM" visible="false">
+            <Label fx:id="tom" layoutX="924.0" layoutY="267.0" text="TOM" visible="false">
                <font>
-                  <Font name="Montserrat Bold" size="36.0" />
+                  <Font name="Calibri Bold" size="36.0" />
                </font>
             </Label>
-            <Label fx:id="volunteer" layoutX="843.0" layoutY="574.0" text="VOLUNTEER" visible="false">
+            <Label fx:id="volunteer" layoutX="869.0" layoutY="577.0" text="VOLUNTEER" visible="false">
                <font>
-                  <Font name="Montserrat Bold" size="36.0" />
+                  <Font name="Calibri Bold" size="36.0" />
                </font>
             </Label>
             <Button id="button" fx:id="nextDialogue" layoutX="759.0" layoutY="898.0" mnemonicParsing="false" onAction="#PressNextDialogue" prefHeight="106.0" prefWidth="403.0" stylesheets="@Style.css" text="PLAY NEXT DIALOGUE" visible="false">
                <font>
-                  <Font name="Montserrat Regular" size="30.0" />
+                  <Font name="Calibri" size="30.0" />
                </font>
             </Button>
             <Button id="button" fx:id="next" layoutX="1647.0" layoutY="965.0" mnemonicParsing="false" onAction="#PressNext" prefHeight="79.0" prefWidth="242.0" stylesheets="@Style.css" text="NEXT" visible="false">
                <font>
-                  <Font name="Montserrat Regular" size="30.0" />
+                  <Font name="Calibri" size="30.0" />
                </font>
             </Button>
             <Label fx:id="tom1" layoutX="273.0" layoutY="354.0" prefHeight="120.0" prefWidth="1374.0" text="Hello there!  I am Tom Foolery, the Court Jester – and it is wonderful to see everyone playing and having a magical time here in the Castle of Miracles today." textAlignment="CENTER" textFill="#fff200" visible="false" wrapText="true">
                <font>
-                  <Font name="Montserrat Regular" size="33.0" />
+                  <Font name="Calibri" size="33.0" />
                </font>
             </Label>
-            <Label fx:id="volunteer1" layoutX="634.0" layoutY="683.0" text="We are having a great time - aren’t we?" textAlignment="CENTER" textFill="#0dff82" visible="false">
+            <Label fx:id="volunteer1" layoutX="694.0" layoutY="683.0" text="We are having a great time - aren’t we?" textAlignment="CENTER" textFill="#0dff82" visible="false">
                <font>
-                  <Font name="Montserrat Regular" size="33.0" />
+                  <Font name="Calibri" size="33.0" />
                </font>
             </Label>
             <Label fx:id="tom2" layoutX="417.0" layoutY="364.0" prefHeight="120.0" prefWidth="1108.0" text="I’m glad to hear that-  I’m glad you are here, I’ve been working on something very special! Do you want to see a magic trick?" textAlignment="CENTER" textFill="#fff200" visible="false" wrapText="true">
                <font>
-                  <Font name="Montserrat Regular" size="33.0" />
+                  <Font name="Calibri" size="33.0" />
                </font>
             </Label>
             <Label fx:id="tom3" layoutX="273.0" layoutY="364.0" prefHeight="120.0" prefWidth="1374.0" text="I can make my magic scepter change any color you think of…..     you have to think really hard though!  can you do that?" textAlignment="CENTER" textFill="#fff200" visible="false" wrapText="true">
                <font>
-                  <Font name="Montserrat Regular" size="33.0" />
+                  <Font name="Calibri" size="33.0" />
                </font>
             </Label>
             <Label fx:id="tom4" layoutX="364.0" layoutY="357.0" prefHeight="135.0" prefWidth="1192.0" text="Think really hard…. even harder…..        But I’ve been working so hard….     ok let me try something else.  What color were you thinking of?" textAlignment="CENTER" textFill="#fff200" visible="false" wrapText="true">
                <font>
-                  <Font name="Montserrat Regular" size="33.0" />
+                  <Font name="Calibri" size="33.0" />
                </font>
             </Label>
-            <Label fx:id="volunteer4" layoutX="588.0" layoutY="683.0" text="No, no that won't do- Tom did you hear them?" textAlignment="CENTER" textFill="#0dff82" visible="false">
+            <Label fx:id="volunteer4" layoutX="647.0" layoutY="686.0" text="No, no that won't do- Tom did you hear them?" textAlignment="CENTER" textFill="#0dff82" visible="false">
                <font>
-                  <Font name="Montserrat Regular" size="33.0" />
+                  <Font name="Calibri" size="33.0" />
                </font>
             </Label>
-            <Label fx:id="tom5" layoutX="815.0" layoutY="364.0" prefHeight="79.0" prefWidth="291.0" text="Not from up here" textAlignment="CENTER" textFill="#fff200" visible="false" wrapText="true">
+            <Label fx:id="tom5" layoutX="842.0" layoutY="376.0" prefHeight="55.0" prefWidth="235.0" text="Not from up here" textAlignment="CENTER" textFill="#fff200" visible="false" wrapText="true">
                <font>
-                  <Font name="Montserrat Regular" size="33.0" />
+                  <Font name="Calibri" size="33.0" />
                </font>
             </Label>
-            <Label fx:id="volunteer5" layoutX="345.0" layoutY="702.0" prefHeight="45.0" prefWidth="1230.0" text="On the count of three tell him what color were you thinking of -- 1 ,2 ,3 ----- " textAlignment="CENTER" textFill="#0dff82" visible="false">
+            <Label fx:id="volunteer5" layoutX="449.0" layoutY="703.0" prefHeight="45.0" prefWidth="1021.0" text="On the count of three tell him what color were you thinking of -- 1 ,2 ,3 ----- " textAlignment="CENTER" textFill="#0dff82" visible="false">
                <font>
-                  <Font name="Montserrat Regular" size="33.0" />
+                  <Font name="Calibri" size="33.0" />
                </font>
             </Label>
-            <Label fx:id="tom6" layoutX="732.0" layoutY="364.0" prefHeight="79.0" prefWidth="456.0" text="TADA!!!!  Oh Look we did it!" textAlignment="CENTER" textFill="#fff200" visible="false" wrapText="true">
+            <Label fx:id="tom6" layoutX="768.0" layoutY="373.0" prefHeight="61.0" prefWidth="383.0" text="TADA!!!!  Oh Look we did it!" textAlignment="CENTER" textFill="#fff200" visible="false" wrapText="true">
                <font>
-                  <Font name="Montserrat Regular" size="33.0" />
+                  <Font name="Calibri" size="33.0" />
                </font>
             </Label>
-            <Label fx:id="volunteer6" layoutX="721.0" layoutY="702.0" prefHeight="45.0" prefWidth="500.0" text="Wow Tom that is a great trick!" textAlignment="CENTER" textFill="#0dff82" visible="false">
+            <Label fx:id="volunteer6" layoutX="754.0" layoutY="700.0" prefHeight="45.0" prefWidth="411.0" text="Wow Tom that is a great trick!" textAlignment="CENTER" textFill="#0dff82" visible="false">
                <font>
-                  <Font name="Montserrat Regular" size="33.0" />
+                  <Font name="Calibri" size="33.0" />
                </font>
             </Label>
-            <Label fx:id="tom7" layoutX="777.0" layoutY="375.0" prefHeight="79.0" prefWidth="366.0" text="Thank you very much!" textAlignment="CENTER" textFill="#fff200" visible="false" wrapText="true">
+            <Label fx:id="tom7" layoutX="809.0" layoutY="373.0" prefHeight="61.0" prefWidth="300.0" text="Thank you very much!" textAlignment="CENTER" textFill="#fff200" visible="false" wrapText="true">
                <font>
-                  <Font name="Montserrat Regular" size="33.0" />
+                  <Font name="Calibri" size="33.0" />
                </font>
             </Label>
-            <Label fx:id="volunteer7" layoutX="779.0" layoutY="702.0" prefHeight="45.0" prefWidth="383.0" text="You are very welcome!" textAlignment="CENTER" textFill="#0dff82" visible="false">
+            <Label fx:id="volunteer7" layoutX="805.0" layoutY="703.0" prefHeight="45.0" prefWidth="312.0" text="You are very welcome!" textAlignment="CENTER" textFill="#0dff82" visible="false">
                <font>
-                  <Font name="Montserrat Regular" size="33.0" />
+                  <Font name="Calibri" size="33.0" />
                </font>
             </Label>
          </children></Pane>

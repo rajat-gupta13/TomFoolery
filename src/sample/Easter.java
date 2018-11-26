@@ -37,17 +37,22 @@ public class Easter {
 
     public void PressNext(javafx.event.ActionEvent event) throws Exception
     {
-        testMethod.ResetAllPositions();
+        testMethod.ResetAllPositions(1.5f);
         Parent pageone = FXMLLoader.load(getClass().getResource(testMethod.ShowSelector() +".fxml"));
-        testMethod.ShowSceneFunction(pageone,event);
+        testMethod.ShowSceneFunction(pageone, event);
     }
 
     public void PressStartShow(javafx.event.ActionEvent event) throws IOException
     {
+        testMethod.ResetAllPositions(1.5f);
+        startShow.setVisible(false);
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
         System.out.println("Playing Easter Dialogue");
         String s = "!vcc1=0!rst178#";
         testMethod.SendInstructionToWeigl(s);
-        startShow.setVisible(false);
+
         tom.setVisible(true);
         tom1.setVisible(true);
         timer.schedule(new TimerTask() {
@@ -55,7 +60,9 @@ public class Easter {
             public void run() {
                 next.setVisible(true);
             }
-        }, 1*1000);
+        }, 1*3000);
+            }
+        }, 1*1500);
 
     }
 }

@@ -38,14 +38,14 @@ public class ReviewSelection implements Initializable {
 
     public void PressNext(javafx.event.ActionEvent event) throws Exception
     {
-        testMethod.ResetAllPositions();
+        testMethod.ResetAllPositions(3);
         Parent pageone = FXMLLoader.load(getClass().getResource(testMethod.ShowSelector() +".fxml"));
         testMethod.ShowSceneFunction(pageone,event);
     }
 
     public void PressStartOver(javafx.event.ActionEvent event) throws Exception {
 
-        testMethod.ResetAllPositions();
+        testMethod.ResetAllPositions(3);
         Method.showQueue.clear();
         Parent pageone = FXMLLoader.load(getClass().getResource("StartShows.fxml"));
         testMethod.ShowSceneFunction(pageone,event);
@@ -112,7 +112,14 @@ public class ReviewSelection implements Initializable {
                 return "MAGIC TRICK";
 
             case "dance":
-                return "DANCE PARTY";
+                if (Method.isDancePartyLoop)
+                    return "DANCE PARTY (LOOPED)";
+                else if (Method.isDancePartyChristmas)
+                    return "DANCE PARTY (CHRISTMAS)";
+                else if (Method.isDancePartyLong)
+                    return "DANCE PARTY (LONG 5m)";
+                else if (Method.isDancePartyShort)
+                    return "DANCE PARTY (SHORT 2m:30s)";
 
             case "story":
                 return "STORYTIME";
@@ -152,6 +159,9 @@ public class ReviewSelection implements Initializable {
 
             case "labor":
                 return "HAPPY LABOR DAY";
+
+            case "opening":
+                return "GRAND OPENING CEREMONY";
         }
         return null;
     }

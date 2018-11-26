@@ -160,7 +160,7 @@ public class ControlFunctions implements Initializable {
 
     public void PressBack(javafx.event.ActionEvent event) throws IOException
     {
-        testMethod.ResetAllPositions();
+        testMethod.ResetAllPositions(3);
         Parent pageone = FXMLLoader.load(getClass().getResource("AdminPanel.fxml"));
         testMethod.ShowSceneFunction(pageone,event);
     }

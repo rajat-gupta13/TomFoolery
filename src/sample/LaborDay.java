@@ -37,17 +37,22 @@ public class LaborDay {
 
     public void PressNext(javafx.event.ActionEvent event) throws Exception
     {
-        testMethod.ResetAllPositions();
+        testMethod.ResetAllPositions(1.5f);
         Parent pageone = FXMLLoader.load(getClass().getResource(testMethod.ShowSelector() +".fxml"));
-        testMethod.ShowSceneFunction(pageone,event);
+        testMethod.ShowSceneFunction(pageone, event);
     }
 
     public void PressStartShow(javafx.event.ActionEvent event) throws IOException
     {
+        startShow.setVisible(false);
+        testMethod.ResetAllPositions(1.5f);
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
         System.out.println("Playing Labor Day Dialogue");
         String s = "!vcc1=0!rst185#";
         testMethod.SendInstructionToWeigl(s);
-        startShow.setVisible(false);
+
         tom.setVisible(true);
         tom1.setVisible(true);
         timer.schedule(new TimerTask() {
@@ -55,7 +60,8 @@ public class LaborDay {
             public void run() {
                 next.setVisible(true);
             }
-        }, 1*2500);
-
+        }, 1*8000);
+            }
+        }, 1*1500);
     }
 }

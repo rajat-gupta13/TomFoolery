@@ -66,18 +66,23 @@ public class Christmas implements Initializable{
 
     public void PressNext(javafx.event.ActionEvent event) throws Exception
     {
-        testMethod.ResetAllPositions();
+        testMethod.ResetAllPositions(1.5f);
         Parent pageone = FXMLLoader.load(getClass().getResource(testMethod.ShowSelector() +".fxml"));
-        testMethod.ShowSceneFunction(pageone,event);
+        testMethod.ShowSceneFunction(pageone, event);
     }
 
     public void PressStartShow(javafx.event.ActionEvent event) throws IOException
     {
+        testMethod.ResetAllPositions(1.5f);
+        startShow.setVisible(false);
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
         System.out.println("Playing Christmas Dialogue 1");
         String s = "!vcc1=0!rst173#";
         dialogueCount++;
         testMethod.SendInstructionToWeigl(s);
-        startShow.setVisible(false);
+
         tom.setVisible(true);
         tom1.setVisible(true);
         volunteer.setVisible(true);
@@ -93,92 +98,111 @@ public class Christmas implements Initializable{
                         nextDialogue.setVisible(true);
                         playAddYes.setVisible(true);
                     }
-                }, 1*1000);
+                }, 1*1200);
             }
         }, 1*10000);
-
+            }
+        }, 1*1500);
     }
 
     public void PressNextDialogue(javafx.event.ActionEvent event) throws IOException
     {
+
         dialogueCount++;
         nextDialogue.setVisible(false);
         playAddYes.setVisible(false);
-        switch (dialogueCount)
-        {
-            case 2:
-                System.out.println("Playing Christmas Dialogue 2");
-                String s = "!vcc1=0!rst174#";
-                testMethod.SendInstructionToWeigl(s);
-                tom1.setVisible(false);
-                tom2.setVisible(true);
-                volunteer1.setVisible(false);
-                volunteer2.setVisible(true);
-                volunteer2.setDisable(true);
-                ChristmasDialogue2();
-                break;
-
-            case 3:
-                System.out.println("Playing Christmas Dialogue 3");
-                s = "!vcc1=0!rst175#";
-                testMethod.SendInstructionToWeigl(s);
-                tom2.setVisible(false);
-                tom3.setVisible(true);
-                volunteer2.setVisible(false);
-                volunteer3.setVisible(true);
-                volunteer3.setDisable(true);
-                timer.schedule(new TimerTask() {
-                    @Override
-                    public void run() {
-                        volunteer3.setDisable(false);
+                switch (dialogueCount) {
+                    case 2:
+                        testMethod.ResetAllPositions(1.5f);
                         timer.schedule(new TimerTask() {
                             @Override
                             public void run() {
-                                nextDialogue.setVisible(true);
+                                System.out.println("Playing Christmas Dialogue 2");
+                                String s = "!vcc1=0!rst174#";
+                                testMethod.SendInstructionToWeigl(s);
+                                tom1.setVisible(false);
+                                tom2.setVisible(true);
+                                volunteer1.setVisible(false);
+                                volunteer2.setVisible(true);
+                                volunteer2.setDisable(true);
+                                ChristmasDialogue2();
                             }
-                        }, 1 * 1000);
-                    }
-                }, 1 * 11000);
-                break;
+                        }, 1 * 1500);
+                        break;
 
-            case 4:
-                System.out.println("Playing Christmas Dialogue 4");
-                s = "!vcc1=0!rst176#";
-                testMethod.SendInstructionToWeigl(s);
-                tom3.setVisible(false);
-                tom4.setVisible(true);
-                volunteer3.setVisible(false);
-                volunteer4.setVisible(true);
-                volunteer4.setDisable(true);
-                timer.schedule(new TimerTask() {
-                    @Override
-                    public void run() {
-                        volunteer4.setDisable(false);
+                    case 3:
+                        testMethod.ResetAllPositions(1.5f);
                         timer.schedule(new TimerTask() {
                             @Override
                             public void run() {
-                                nextDialogue.setVisible(true);
+                                System.out.println("Playing Christmas Dialogue 3");
+                                String  s = "!vcc1=0!rst175#";
+                                testMethod.SendInstructionToWeigl(s);
+                                tom2.setVisible(false);
+                                tom3.setVisible(true);
+                                volunteer2.setVisible(false);
+                                volunteer3.setVisible(true);
+                                volunteer3.setDisable(true);
+                                timer.schedule(new TimerTask() {
+                                    @Override
+                                    public void run() {
+                                        volunteer3.setDisable(false);
+                                        timer.schedule(new TimerTask() {
+                                            @Override
+                                            public void run() {
+                                                nextDialogue.setVisible(true);
+                                            }
+                                        }, 1 * 800);
+                                    }
+                                }, 1 * 11000);
                             }
-                        }, 1 * 1000);
-                    }
-                }, 1 * 750);
-                break;
-            case 5:
-                System.out.println("Playing Christmas Dialogue 5");
-                s = "!vcc1=0!rst177#";
-                testMethod.SendInstructionToWeigl(s);
-                tom4.setVisible(false);
-                tom5.setVisible(true);
-                volunteer.setVisible(false);
-                volunteer4.setVisible(false);
-                timer.schedule(new TimerTask() {
-                    @Override
-                    public void run() {
-                        next.setVisible(true);
-                    }
-                }, 1*6000);
-                break;
-        }
+                        }, 1 * 1500);
+                        break;
+
+                    case 4:
+                        testMethod.ResetAllPositions(1.5f);
+                        timer.schedule(new TimerTask() {
+                            @Override
+                            public void run() {
+                                System.out.println("Playing Christmas Dialogue 4");
+                                String s = "!vcc1=0!rst176#";
+                                testMethod.SendInstructionToWeigl(s);
+                                tom3.setVisible(false);
+                                tom4.setVisible(true);
+                                volunteer3.setVisible(false);
+                                volunteer4.setVisible(true);
+                                volunteer4.setDisable(true);
+                                timer.schedule(new TimerTask() {
+                                    @Override
+                                    public void run() {
+                                        volunteer4.setDisable(false);
+                                        timer.schedule(new TimerTask() {
+                                            @Override
+                                            public void run() {
+                                                nextDialogue.setVisible(true);
+                                            }
+                                        }, 1 * 1000);
+                                    }
+                                }, 1 * 750);
+                            }
+                            }, 1 * 1500);
+                        break;
+                    case 5:
+                        System.out.println("Playing Christmas Dialogue 5");
+                        String s = "!vcc1=0!rst177#";
+                        testMethod.SendInstructionToWeigl(s);
+                        tom4.setVisible(false);
+                        tom5.setVisible(true);
+                        volunteer.setVisible(false);
+                        volunteer4.setVisible(false);
+                        timer.schedule(new TimerTask() {
+                            @Override
+                            public void run() {
+                                next.setVisible(true);
+                            }
+                        }, 1 * 6000);
+                        break;
+                }
     }
 
     private void ChristmasDialogue2() {
@@ -192,66 +216,71 @@ public class Christmas implements Initializable{
                         nextDialogue.setVisible(true);
                         playAddYes.setVisible(true);
                     }
-                }, 1 * 1500);
+                }, 1 * 1300);
             }
-        }, 1 * 6000);
+        }, 1 * 6300);
     }
 
     public void PressAddYes(javafx.event.ActionEvent event) throws IOException
     {
+        testMethod.ResetAllPositions(1.5f);
         dialogueCount++;
         nextDialogue.setVisible(false);
         playAddYes.setVisible(false);
-        switch (dialogueCount)
-        {
-            case 2:
-                System.out.println("Playing Christmas Dialogue 2");
-                String s = "!vcc1=0!rst26#";
-                testMethod.SendInstructionToWeigl(s);
-                timer.schedule(new TimerTask() {
-                    @Override
-                    public void run() {
-                        String s = "!vcc1=0!rst174#";
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                switch (dialogueCount) {
+                    case 2:
+                        System.out.println("Playing Christmas Dialogue 2 with Yes");
+                        String s = "!vcc1=0!rst38#";
                         testMethod.SendInstructionToWeigl(s);
-                    }
-                }, 1 * 1000);
-                tom1.setVisible(false);
-                tom2.setVisible(true);
-                volunteer1.setVisible(false);
-                volunteer2.setVisible(true);
-                volunteer2.setDisable(true);
-                ChristmasDialogue2();
-                break;
-
-            case 3:
-                System.out.println("Playing Christmas Dialogue 3");
-                s = "!vcc1=0!rst26#";
-                testMethod.SendInstructionToWeigl(s);
-                timer.schedule(new TimerTask() {
-                    @Override
-                    public void run() {
-                        String s = "!vcc1=0!rst175#";
-                        testMethod.SendInstructionToWeigl(s);
-                    }
-                }, 1 * 1000);
-                tom2.setVisible(false);
-                tom3.setVisible(true);
-                volunteer2.setVisible(false);
-                volunteer3.setVisible(true);
-                volunteer3.setDisable(true);
-                timer.schedule(new TimerTask() {
-                    @Override
-                    public void run() {
-                        volunteer3.setDisable(false);
                         timer.schedule(new TimerTask() {
                             @Override
                             public void run() {
-                                nextDialogue.setVisible(true);
+                                String s = "!vcc1=0!rst174#";
+                                testMethod.SendInstructionToWeigl(s);
                             }
                         }, 1 * 1000);
-                    }
-                }, 1 * 11000);
-                break;
-        }
+                        tom1.setVisible(false);
+                        tom2.setVisible(true);
+                        volunteer1.setVisible(false);
+                        volunteer2.setVisible(true);
+                        volunteer2.setDisable(true);
+                        ChristmasDialogue2();
+                        break;
+
+                    case 3:
+                        System.out.println("Playing Christmas Dialogue 3 with Yes");
+                        s = "!vcc1=0!rst38#";
+                        testMethod.SendInstructionToWeigl(s);
+                        timer.schedule(new TimerTask() {
+                            @Override
+                            public void run() {
+                                String s = "!vcc1=0!rst175#";
+                                testMethod.SendInstructionToWeigl(s);
+                            }
+                        }, 1 * 1000);
+                        tom2.setVisible(false);
+                        tom3.setVisible(true);
+                        volunteer2.setVisible(false);
+                        volunteer3.setVisible(true);
+                        volunteer3.setDisable(true);
+                        timer.schedule(new TimerTask() {
+                            @Override
+                            public void run() {
+                                volunteer3.setDisable(false);
+                                timer.schedule(new TimerTask() {
+                                    @Override
+                                    public void run() {
+                                        nextDialogue.setVisible(true);
+                                    }
+                                }, 1 * 1300);
+                            }
+                        }, 1 * 11300);
+                        break;
+                }
+            }
+        }, 1 * 1500);
     }
 }

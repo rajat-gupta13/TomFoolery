@@ -70,13 +70,14 @@ public class MagicTrick1 implements Initializable{
 
     public void PressNext(javafx.event.ActionEvent event) throws Exception
     {
-        testMethod.ResetAllPositions();
+        testMethod.ResetAllPositions(1.5f);
         Parent pageone = FXMLLoader.load(getClass().getResource(testMethod.ShowSelector() +".fxml"));
-        testMethod.ShowSceneFunction(pageone,event);
+        testMethod.ShowSceneFunction(pageone, event);
     }
 
     public void PressStartShow(javafx.event.ActionEvent event) throws IOException
     {
+        //testMethod.ResetAllPositions();
         System.out.println("Playing Magic Trick Dialogue 1");
         String s = "!vcc1=0!rst121#";
         testMethod.SendInstructionToWeigl(s);
@@ -96,142 +97,147 @@ public class MagicTrick1 implements Initializable{
                     public void run() {
                         nextDialogue.setVisible(true);
                     }
-                }, 1*5000);
+                }, 1*1500);
             }
-        }, 1*16000);
+        }, 1*17800);
 
     }
 
     public void PressNextDialogue(javafx.event.ActionEvent event) throws IOException
     {
+        testMethod.ResetAllPositions(1.5f);
         dialogueCount++;
         nextDialogue.setVisible(false);
-        switch (dialogueCount)
-        {
-            case 2:
-                System.out.println("Playing Magic Trick Dialogue 2");
-                String s = "!vcc1=0!rst122#";
-                testMethod.SendInstructionToWeigl(s);
-                tom1.setVisible(false);
-                tom2.setVisible(true);
-                volunteer.setVisible(false);
-                volunteer1.setVisible(false);
-                timer.schedule(new TimerTask() {
-                    @Override
-                    public void run() {
-                        nextDialogue.setVisible(true);
-                    }
-                }, 1*6000);
-                break;
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
 
-            case 3:
-                System.out.println("Playing Magic Trick Dialogue 3");
-                s = "!vcc1=0!rst123#";
-                testMethod.SendInstructionToWeigl(s);
-                tom2.setVisible(false);
-                tom3.setVisible(true);
-                timer.schedule(new TimerTask() {
-                    @Override
-                    public void run() {
-                        nextDialogue.setVisible(true);
-
-                    }
-                }, 1*14000);
-                break;
-
-            case 4:
-                System.out.println("Playing Magic Trick Dialogue 4");
-                s = "!vcc1=0!rst124#";
-                testMethod.SendInstructionToWeigl(s);
-                tom3.setVisible(false);
-                tom4.setVisible(true);
-                volunteer.setVisible(true);
-                volunteer4.setVisible(true);
-                volunteer4.setDisable(true);
-                timer.schedule(new TimerTask() {
-                    @Override
-                    public void run() {
-                        volunteer4.setDisable(false);
+                switch (dialogueCount)
+                {
+                    case 2:
+                        System.out.println("Playing Magic Trick Dialogue 2");
+                        String s = "!vcc1=0!rst122#";
+                        testMethod.SendInstructionToWeigl(s);
+                        tom1.setVisible(false);
+                        tom2.setVisible(true);
+                        volunteer.setVisible(false);
+                        volunteer1.setVisible(false);
                         timer.schedule(new TimerTask() {
                             @Override
                             public void run() {
                                 nextDialogue.setVisible(true);
                             }
-                        }, 1*4000);
-                    }
-                }, 1*6000);
-                break;
+                        }, 1*8000);
+                        break;
 
-            case 5:
-                System.out.println("Playing Magic Trick Dialogue 5");
-                s = "!vcc1=0!rst125#";
-                testMethod.SendInstructionToWeigl(s);
-                tom4.setVisible(false);
-                tom5.setVisible(true);
-                volunteer4.setVisible(false);
-                volunteer5.setVisible(true);
-                volunteer5.setDisable(true);
-                timer.schedule(new TimerTask() {
-                    @Override
-                    public void run() {
-                        volunteer5.setDisable(false);
+                    case 3:
+                        System.out.println("Playing Magic Trick Dialogue 3");
+                        s = "!vcc1=0!rst123#";
+                        testMethod.SendInstructionToWeigl(s);
+                        tom2.setVisible(false);
+                        tom3.setVisible(true);
                         timer.schedule(new TimerTask() {
                             @Override
                             public void run() {
                                 nextDialogue.setVisible(true);
-                            }
-                        }, 1*3000);
-                    }
-                }, 1*8000);
-                break;
 
-            case 6:
-                System.out.println("Playing Magic Trick Dialogue 6");
-                s = "!vcc1=0!rst126#";
-                testMethod.SendInstructionToWeigl(s);
-                tom5.setVisible(false);
-                tom6.setVisible(true);
-                volunteer5.setVisible(false);
-                volunteer6.setVisible(true);
-                volunteer6.setDisable(true);
-                timer.schedule(new TimerTask() {
-                    @Override
-                    public void run() {
-                        volunteer6.setDisable(false);
+                            }
+                        }, 1*11500);
+                        break;
+
+                    case 4:
+                        System.out.println("Playing Magic Trick Dialogue 4");
+                        s = "!vcc1=0!rst124#";
+                        testMethod.SendInstructionToWeigl(s);
+                        tom3.setVisible(false);
+                        tom4.setVisible(true);
+                        volunteer.setVisible(true);
+                        volunteer4.setVisible(true);
+                        volunteer4.setDisable(true);
                         timer.schedule(new TimerTask() {
                             @Override
                             public void run() {
-                                nextDialogue.setVisible(true);
+                                volunteer4.setDisable(false);
+                                timer.schedule(new TimerTask() {
+                                    @Override
+                                    public void run() {
+                                        nextDialogue.setVisible(true);
+                                    }
+                                }, 1*1500);
                             }
-                        }, 1*3000);
-                    }
-                }, 1*5000);
-                break;
+                        }, 1*21600);
+                        break;
 
-            case 7:
-                System.out.println("Playing Magic Trick Dialogue 7");
-                s = "!vcc1=0!rst127#";
-                testMethod.SendInstructionToWeigl(s);
-                tom6.setVisible(false);
-                tom7.setVisible(true);
-                volunteer6.setVisible(false);
-                volunteer7.setVisible(true);
-                volunteer7.setDisable(true);
-                timer.schedule(new TimerTask() {
-                    @Override
-                    public void run() {
-                        volunteer7.setDisable(false);
+                    case 5:
+                        System.out.println("Playing Magic Trick Dialogue 5");
+                        s = "!vcc1=0!rst125#";
+                        testMethod.SendInstructionToWeigl(s);
+                        tom4.setVisible(false);
+                        tom5.setVisible(true);
+                        volunteer4.setVisible(false);
+                        volunteer5.setVisible(true);
+                        volunteer5.setDisable(true);
                         timer.schedule(new TimerTask() {
                             @Override
                             public void run() {
-                                next.setVisible(true);
+                                volunteer5.setDisable(false);
+                                timer.schedule(new TimerTask() {
+                                    @Override
+                                    public void run() {
+                                        nextDialogue.setVisible(true);
+                                    }
+                                }, 1*2000);
                             }
-                        }, 1*3000);
-                    }
-                }, 1*5000);
-                break;
-        }
+                        }, 1*1400);
+                        break;
 
+                    case 6:
+                        System.out.println("Playing Magic Trick Dialogue 6");
+                        s = "!vcc1=0!rst126#";
+                        testMethod.SendInstructionToWeigl(s);
+                        tom5.setVisible(false);
+                        tom6.setVisible(true);
+                        volunteer5.setVisible(false);
+                        volunteer6.setVisible(true);
+                        volunteer6.setDisable(true);
+                        timer.schedule(new TimerTask() {
+                            @Override
+                            public void run() {
+                                volunteer6.setDisable(false);
+                                timer.schedule(new TimerTask() {
+                                    @Override
+                                    public void run() {
+                                        nextDialogue.setVisible(true);
+                                    }
+                                }, 1*1500);
+                            }
+                        }, 1*3800);
+                        break;
 
+                    case 7:
+                        System.out.println("Playing Magic Trick Dialogue 7");
+                        s = "!vcc1=0!rst127#";
+                        testMethod.SendInstructionToWeigl(s);
+                        tom6.setVisible(false);
+                        tom7.setVisible(true);
+                        volunteer6.setVisible(false);
+                        volunteer7.setVisible(true);
+                        volunteer7.setDisable(true);
+                        timer.schedule(new TimerTask() {
+                            @Override
+                            public void run() {
+                                volunteer7.setDisable(false);
+                                timer.schedule(new TimerTask() {
+                                    @Override
+                                    public void run() {
+                                        next.setVisible(true);
+                                    }
+                                }, 1*1500);
+                            }
+                        }, 1*2500);
+                        break;
+                }
+            }
+        }, 1*1500);
     }
 }

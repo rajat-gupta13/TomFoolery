@@ -66,13 +66,14 @@ public class WelcomeCastle1 implements Initializable {
 
     public void PressNext(javafx.event.ActionEvent event) throws Exception
     {
-        testMethod.ResetAllPositions();
+        testMethod.ResetAllPositions(1.5f);
         Parent pageone = FXMLLoader.load(getClass().getResource(testMethod.ShowSelector() +".fxml"));
-        testMethod.ShowSceneFunction(pageone,event);
+        testMethod.ShowSceneFunction(pageone, event);
     }
 
     public void PressStartShow(javafx.event.ActionEvent event) throws IOException
     {
+        //testMethod.ResetAllPositions();
         System.out.println("Playing Welcome Dialogue 1");
         String s = "!vcc1=0!rst01#";
         testMethod.SendInstructionToWeigl(s);
@@ -92,151 +93,154 @@ public class WelcomeCastle1 implements Initializable {
                     public void run() {
                         nextDialogue.setVisible(true);
                     }
-                }, 1*2000);
+                }, 1*1500);
             }
-        }, 1*21000);
+        }, 1*25500);
 
     }
 
     public void PressNextDialogue(javafx.event.ActionEvent event) throws IOException
     {
+        testMethod.ResetAllPositions(1.5f);
         dialogueCount++;
         nextDialogue.setVisible(false);
-        switch (dialogueCount)
-        {
-            case 2:
-                System.out.println("Playing Welcome Dialogue 2");
-                String s = "!vcc1=0!rst02#";
-                testMethod.SendInstructionToWeigl(s);
-                tom1.setVisible(false);
-                tom2.setVisible(true);
-                volunteer1.setVisible(false);
-                volunteer2.setVisible(true);
-                volunteer2.setDisable(true);
-                timer.schedule(new TimerTask() {
-                    @Override
-                    public void run() {
-                        volunteer2.setDisable(false);
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                switch (dialogueCount) {
+                    case 2:
+                        System.out.println("Playing Welcome Dialogue 2");
+                        String s = "!vcc1=0!rst02#";
+                        testMethod.SendInstructionToWeigl(s);
+                        tom1.setVisible(false);
+                        tom2.setVisible(true);
+                        volunteer1.setVisible(false);
+                        volunteer2.setVisible(true);
+                        volunteer2.setDisable(true);
                         timer.schedule(new TimerTask() {
                             @Override
                             public void run() {
-                                nextDialogue.setVisible(true);
+                                volunteer2.setDisable(false);
+                                timer.schedule(new TimerTask() {
+                                    @Override
+                                    public void run() {
+                                        nextDialogue.setVisible(true);
+                                    }
+                                }, 1 * 1200);
                             }
-                        }, 1*1000);
-                    }
-                }, 1*7000);
-                break;
+                        }, 1 * 7000);
+                        break;
 
-            case 3:
-                System.out.println("Playing Welcome Dialogue 3");
-                s = "!vcc1=0!rst03#";
-                testMethod.SendInstructionToWeigl(s);
-                tom2.setVisible(false);
-                tom3.setVisible(true);
-                volunteer2.setVisible(false);
-                volunteer3.setVisible(true);
-                volunteer3.setDisable(true);
-                timer.schedule(new TimerTask() {
-                    @Override
-                    public void run() {
-                        volunteer3.setDisable(false);
+                    case 3:
+                        System.out.println("Playing Welcome Dialogue 3");
+                        s = "!vcc1=0!rst03#";
+                        testMethod.SendInstructionToWeigl(s);
+                        tom2.setVisible(false);
+                        tom3.setVisible(true);
+                        volunteer2.setVisible(false);
+                        volunteer3.setVisible(true);
+                        volunteer3.setDisable(true);
                         timer.schedule(new TimerTask() {
                             @Override
                             public void run() {
-                                nextDialogue.setVisible(true);
+                                volunteer3.setDisable(false);
+                                timer.schedule(new TimerTask() {
+                                    @Override
+                                    public void run() {
+                                        nextDialogue.setVisible(true);
+                                    }
+                                }, 1 * 1500);
                             }
-                        }, 1*1000);
-                    }
-                }, 1*15000);
-                break;
+                        }, 1 * 15500);
+                        break;
 
-            case 4:
-                System.out.println("Playing Welcome Dialogue 4");
-                s = "!vcc1=0!rst04#";
-                testMethod.SendInstructionToWeigl(s);
-                tom3.setVisible(false);
-                tom4.setVisible(true);
-                volunteer3.setVisible(false);
-                volunteer4.setVisible(true);
-                volunteer4.setDisable(true);
-                timer.schedule(new TimerTask() {
-                    @Override
-                    public void run() {
-                        volunteer4.setDisable(false);
+                    case 4:
+                        System.out.println("Playing Welcome Dialogue 4");
+                        s = "!vcc1=0!rst04#";
+                        testMethod.SendInstructionToWeigl(s);
+                        tom3.setVisible(false);
+                        tom4.setVisible(true);
+                        volunteer3.setVisible(false);
+                        volunteer4.setVisible(true);
+                        volunteer4.setDisable(true);
                         timer.schedule(new TimerTask() {
                             @Override
                             public void run() {
-                                nextDialogue.setVisible(true);
+                                volunteer4.setDisable(false);
+                                timer.schedule(new TimerTask() {
+                                    @Override
+                                    public void run() {
+                                        nextDialogue.setVisible(true);
+                                    }
+                                }, 1 * 1000);
                             }
-                        }, 1*2000);
-                    }
-                }, 1*6000);
-                break;
+                        }, 1 * 6500);
+                        break;
 
-            case 5:
-                System.out.println("Playing Welcome Dialogue 5");
-                s = "!vcc1=0!rst05#";
-                testMethod.SendInstructionToWeigl(s);
-                tom4.setVisible(false);
-                tom5.setVisible(true);
-                volunteer4.setVisible(false);
-                volunteer5.setVisible(true);
-                volunteer5.setDisable(true);
-                timer.schedule(new TimerTask() {
-                    @Override
-                    public void run() {
-                        volunteer5.setDisable(false);
+                    case 5:
+                        System.out.println("Playing Welcome Dialogue 5");
+                        s = "!vcc1=0!rst05#";
+                        testMethod.SendInstructionToWeigl(s);
+                        tom4.setVisible(false);
+                        tom5.setVisible(true);
+                        volunteer4.setVisible(false);
+                        volunteer5.setVisible(true);
+                        volunteer5.setDisable(true);
                         timer.schedule(new TimerTask() {
                             @Override
                             public void run() {
-                                nextDialogue.setVisible(true);
+                                volunteer5.setDisable(false);
+                                timer.schedule(new TimerTask() {
+                                    @Override
+                                    public void run() {
+                                        nextDialogue.setVisible(true);
+                                    }
+                                }, 1 * 1000);
                             }
-                        }, 1*1000);
-                    }
-                }, 1*9000);
-                break;
+                        }, 1 * 9800);
+                        break;
 
-            case 6:
-                System.out.println("Playing Welcome Dialogue 6");
-                s = "!vcc1=0!rst06#";
-                testMethod.SendInstructionToWeigl(s);
-                tom5.setVisible(false);
-                tom6.setVisible(true);
-                volunteer5.setVisible(false);
-                volunteer6.setVisible(true);
-                volunteer6.setDisable(true);
-                timer.schedule(new TimerTask() {
-                    @Override
-                    public void run() {
-                        volunteer6.setDisable(false);
+                    case 6:
+                        System.out.println("Playing Welcome Dialogue 6");
+                        s = "!vcc1=0!rst06#";
+                        testMethod.SendInstructionToWeigl(s);
+                        tom5.setVisible(false);
+                        tom6.setVisible(true);
+                        volunteer5.setVisible(false);
+                        volunteer6.setVisible(true);
+                        volunteer6.setDisable(true);
                         timer.schedule(new TimerTask() {
                             @Override
                             public void run() {
-                                nextDialogue.setVisible(true);
+                                volunteer6.setDisable(false);
+                                timer.schedule(new TimerTask() {
+                                    @Override
+                                    public void run() {
+                                        nextDialogue.setVisible(true);
+                                    }
+                                }, 1 * 1000);
                             }
-                        }, 1*1000);
-                    }
-                }, 1*4000);
-                break;
+                        }, 1 * 4000);
+                        break;
 
-            case 7:
-                System.out.println("Playing Welcome Dialogue 7");
-                s = "!vcc1=0!rst07#";
-                testMethod.SendInstructionToWeigl(s);
-                tom6.setVisible(false);
-                tom7.setVisible(true);
-                volunteer6.setVisible(false);
-                volunteer.setVisible(false);
-                timer.schedule(new TimerTask() {
-                    @Override
-                    public void run() {
-                        next.setVisible(true);
-                    }
-                }, 1*7000);
-                break;
-        }
-
-
+                    case 7:
+                        System.out.println("Playing Welcome Dialogue 7");
+                        s = "!vcc1=0!rst07#";
+                        testMethod.SendInstructionToWeigl(s);
+                        tom6.setVisible(false);
+                        tom7.setVisible(true);
+                        volunteer6.setVisible(false);
+                        volunteer.setVisible(false);
+                        timer.schedule(new TimerTask() {
+                            @Override
+                            public void run() {
+                                next.setVisible(true);
+                            }
+                        }, 1 * 7600);
+                        break;
+                }
+            }
+        }, 1 * 1500);
     }
 
     @Override

@@ -48,17 +48,21 @@ public class Halloween {
 
     public void PressNext(javafx.event.ActionEvent event) throws Exception
     {
-        testMethod.ResetAllPositions();
+        testMethod.ResetAllPositions(1.5f);
         Parent pageone = FXMLLoader.load(getClass().getResource(testMethod.ShowSelector() +".fxml"));
-        testMethod.ShowSceneFunction(pageone,event);
+        testMethod.ShowSceneFunction(pageone, event);
     }
 
     public void PressStartShow(javafx.event.ActionEvent event) throws IOException
     {
+        testMethod.ResetAllPositions(1.5f);
+        startShow.setVisible(false);
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
         System.out.println("Playing Halloween Dialogue 1");
         String s = "!vcc1=0!rst171#";
         testMethod.SendInstructionToWeigl(s);
-        startShow.setVisible(false);
         tom.setVisible(true);
         tom1.setVisible(true);
         volunteer.setVisible(true);
@@ -74,54 +78,68 @@ public class Halloween {
                         nextDialogue.setVisible(true);
                         playAddYes.setVisible(true);
                     }
-                }, 1*1000);
+                }, 1*1700);
             }
-        }, 1*5000);
-
+        }, 1*12500);
+            }
+        }, 1*1500);
     }
 
     public void PressNextDialogue(javafx.event.ActionEvent event) throws IOException
     {
         nextDialogue.setVisible(false);
         playAddYes.setVisible(false);
-        System.out.println("Playing Halloween Dialogue 2");
-        String s = "!vcc1=0!rst172#";
-        testMethod.SendInstructionToWeigl(s);
-        tom1.setVisible(false);
-        tom2.setVisible(true);
-        volunteer.setVisible(false);
-        volunteer1.setVisible(false);
+        testMethod.ResetAllPositions(1.5f);
         timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                System.out.println("Playing Halloween Dialogue 2");
+                String s = "!vcc1=0!rst172#";
+                testMethod.SendInstructionToWeigl(s);
+                tom1.setVisible(false);
+                tom2.setVisible(true);
+                volunteer.setVisible(false);
+                volunteer1.setVisible(false);
+                timer.schedule(new TimerTask() {
                     @Override
                     public void run() {
                         next.setVisible(true);
                     }
-                }, 1 * 1500);
+                }, 1 * 8000);
+            }
+        }, 1 * 1500);
     }
 
     public void PressAddYes(javafx.event.ActionEvent event) throws IOException
     {
         nextDialogue.setVisible(false);
         playAddYes.setVisible(false);
-        System.out.println("Playing Halloween Dialogue 2");
-        String s = "!vcc1=0!rst26#";
-        testMethod.SendInstructionToWeigl(s);
+        testMethod.ResetAllPositions(1.5f);
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
-                String s = "!vcc1=0!rst172#";
+                System.out.println("Playing Halloween Dialogue 2 with Yes");
+                String s = "!vcc1=0!rst38#";
                 testMethod.SendInstructionToWeigl(s);
-            }
-        }, 1*1000);
-        tom1.setVisible(false);
-        tom2.setVisible(true);
-        volunteer.setVisible(false);
-        volunteer1.setVisible(false);
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                next.setVisible(true);
+                timer.schedule(new TimerTask() {
+                    @Override
+                    public void run() {
+                        String s = "!vcc1=0!rst172#";
+                        testMethod.SendInstructionToWeigl(s);
+                    }
+                }, 1 * 1000);
+                tom1.setVisible(false);
+                tom2.setVisible(true);
+                volunteer.setVisible(false);
+                volunteer1.setVisible(false);
+                timer.schedule(new TimerTask() {
+                    @Override
+                    public void run() {
+                        next.setVisible(true);
+                    }
+                }, 1 * 8000);
             }
         }, 1 * 1500);
     }
+
 }

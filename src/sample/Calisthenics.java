@@ -35,38 +35,38 @@ public class Calisthenics {
 
         headturn.setStyle("-fx-background-color: #66BB6A; ");
         System.out.println("Test Head Turn");
-        String s="!vcc1=0!rst801#";
+        String s="!vcc1=0!rsal801#";
         testMethod.SendInstructionToWeigl(s);
 
     }
     public void PressHeadTilt(javafx.event.ActionEvent event) throws Exception {
         headtilt.setStyle("-fx-background-color: #66BB6A; ");
         System.out.println("Test Head tilt");
-        String s="!vcc1=0!rst804#";
+        String s="!vcc1=0!rsal804#";
         testMethod.SendInstructionToWeigl(s);
     }
 
     public void PressTorsoBend(javafx.event.ActionEvent event) throws Exception {
         torso.setStyle("-fx-background-color: #66BB6A; ");
         System.out.println("Test Torso Bend");
-        String s="!vcc1=0!rst805#";
+        String s="!vcc1=0!rsal805#";
         testMethod.SendInstructionToWeigl(s);
     }
 
     public void PressMouth(javafx.event.ActionEvent event) throws Exception {
         mouth.setStyle("-fx-background-color: #66BB6A; ");
         System.out.println("TestMouthOpen");
-        String s="!vcc1=0!rst802#";
+        String s="!vcc1=0!rsal802#";
         testMethod.SendInstructionToWeigl(s);
     }
     public void PressScepter(javafx.event.ActionEvent event) throws Exception {
         scepter.setStyle("-fx-background-color: #66BB6A; ");
         System.out.println("TestScepter");
-        String s="!vcc1=0!rst803#";
+        String s="!vcc1=0!rsal803#";
         testMethod.SendInstructionToWeigl(s);
     }
     public void PressStop(javafx.event.ActionEvent event) throws Exception {
-        testMethod.ResetAllPositions();
+        testMethod.ResetAllPositions(3);
         ToggleDisable(true);
         timer.schedule(new TimerTask() {
             @Override
@@ -87,7 +87,7 @@ public class Calisthenics {
 
     public void PressBack(javafx.event.ActionEvent event) throws IOException
     {
-        testMethod.ResetAllPositions();
+        testMethod.ResetAllPositions(3);
         Parent pageone = FXMLLoader.load(getClass().getResource("AdminPanel.fxml"));
         testMethod.ShowSceneFunction(pageone,event);
     }

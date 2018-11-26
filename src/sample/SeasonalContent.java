@@ -74,7 +74,7 @@ public class SeasonalContent implements Initializable{
     }
     public void PressBack(javafx.event.ActionEvent event) throws IOException
     {
-        testMethod.ResetAllPositions();
+        testMethod.ResetAllPositions(3);
         Parent pageone = FXMLLoader.load(getClass().getResource("MiddleShows.fxml"));
         testMethod.ShowSceneFunction(pageone,event);
         if (Method.showQueue.contains("halloween")) {
@@ -121,7 +121,7 @@ public class SeasonalContent implements Initializable{
 
     public void PressNext(javafx.event.ActionEvent event) throws Exception {
 
-        testMethod.ResetAllPositions();
+        testMethod.ResetAllPositions(3);
         Parent pageone = FXMLLoader.load(getClass().getResource("MiddleShows.fxml"));
         testMethod.ShowSceneFunction(pageone,event);
     }

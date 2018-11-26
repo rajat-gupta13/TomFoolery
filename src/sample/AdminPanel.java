@@ -16,8 +16,6 @@ public class AdminPanel {
     private Button calisthenics;
     @FXML
     private Button control;
-    @FXML
-    private Button opening;
 
     Method testMethod = new Method();
     Timer timer = new Timer();
@@ -57,22 +55,10 @@ public class AdminPanel {
         testMethod.ShowSceneFunction(pageone, event);
     }
 
-    public void PressOpeningCeremony(javafx.event.ActionEvent event) throws IOException
-    {
-        System.out.println("Play Opening Ceremony");
-        String s="!vcc1=0!rst201#";
-        testMethod.SendInstructionToWeigl(s);
-        ToggleDisable(true);
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                ToggleDisable(false);
-            }
-        }, 1*15000);
-    }
+
+
 
     private void ToggleDisable(boolean bool){
-        opening.setDisable(bool);
         control.setDisable(bool);
         calisthenics.setDisable(bool);
         thankyou.setDisable(bool);
