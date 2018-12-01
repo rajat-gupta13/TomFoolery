@@ -10,4 +10,4 @@ Tom Foolery is a five function audio animatronic puppet created by the Miracle W
 6. After the specified amount of delay, the Play Next Dialogue button appears which triggers the next dialogue. In some shows, there are additional dialogue options. 
 7. At the end of each show, there will be a Next button leading to the next show in the queue or an End Show button leading to the Main Menu.
 8. On each button press of the Play Next Dialogue or the Main Menu, the Animatronic is faded from its current position to its central idle position in the specified amount of time to avoid snapping in the animatronic. This means there is a delay of the specified time before which the next dialogue is played.
-
+9. The Default resolution of the Touch Screen Interface is 1920x1080. Whenever you create a new page, make sure to make the changes to .fxml file so that the aspect ratio of the pane is maintained.
