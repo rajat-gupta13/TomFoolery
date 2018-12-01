@@ -1,5 +1,5 @@
 # TomFoolery
-Tom Foolery is a five function audio animatronic puppet created by the Miracle Workshop team at Carnegie Mellon University’s Entertainment Technology Center. The puppet was installed at Give Kids the World Village in Kissimmee, Florida. This is the code for the touch screen interface that the staff at the village can use to control Tom Foolery. https://github.com/rajat-gupta13/TomFoolery 
+Tom Foolery is a five function audio animatronic puppet created by the Miracle Workshop team at Carnegie Mellon University’s Entertainment Technology Center. The puppet was installed at Give Kids the World Village in Kissimmee, Florida. This is the code for the touch screen interface that the staff at the village can use to control Tom Foolery. 
 
 ## Before you begin: 
 1. You will need an IDE that supports JavaFX. We used JetBrains IntelliJ, but anything else would also work like Eclipse.
