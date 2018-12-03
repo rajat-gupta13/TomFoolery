@@ -9,6 +9,10 @@ import javafx.scene.control.TextField;
 
 import java.io.IOException;
 
+// Class for the Admin Login Page
+// Username: admin
+// Password: gktwtomadmin123
+
 public class AdminLogin {
     @FXML
     private TextField usernameText;

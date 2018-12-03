@@ -10,7 +10,7 @@ import javafx.scene.control.Label;
 import java.io.IOException;
 import java.net.URL;
 import java.util.*;
-
+//Class for Christmas show Seasonal Content
 public class Christmas implements Initializable{
 
     @FXML

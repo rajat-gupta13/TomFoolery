@@ -10,6 +10,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+//EXPERIMENTAL
+//Class for Controlling Tom's Functions remotely
 public class ControlFunctions implements Initializable {
     @FXML
     private Button headturn;
@@ -34,6 +36,7 @@ public class ControlFunctions implements Initializable {
     {
 
     }
+    //Turn Head Turn On/Off
     public void PressHeadTurn(javafx.event.ActionEvent event) throws Exception {
         if (!HEAD_TURN_PRESSED) {
             headturn.setStyle("-fx-background-color: #B71C1C; ");
@@ -53,6 +56,8 @@ public class ControlFunctions implements Initializable {
         }
 
     }
+
+    //Turn Head Tilt On/Off
     public void PressHeadTilt(javafx.event.ActionEvent event) throws Exception {
        if (!HEAD_TILT_PRESSED) {
            headtilt.setStyle("-fx-background-color: #B71C1C; ");
@@ -72,6 +77,7 @@ public class ControlFunctions implements Initializable {
        }
     }
 
+    //Turn Torso Forebend On/Off
     public void PressTorsoBend(javafx.event.ActionEvent event) throws Exception {
         if (!TORSO_PRESSED) {
             torso.setStyle("-fx-background-color: #B71C1C; ");
@@ -91,6 +97,7 @@ public class ControlFunctions implements Initializable {
         }
     }
 
+    //Turn Mouth On/Off
     public void PressMouth(javafx.event.ActionEvent event) throws Exception {
         if (!MOUTH_PRESSED) {
             mouth.setStyle("-fx-background-color: #B71C1C; ");
@@ -109,6 +116,8 @@ public class ControlFunctions implements Initializable {
             testMethod.SavePreferences("MOUTH", false);
         }
     }
+
+    //Turn Scepter On/Off
     public void PressScepter(javafx.event.ActionEvent event) throws Exception {
         if (!SCEPTER_PRESSED) {
             scepter.setStyle("-fx-background-color: #B71C1C; ");

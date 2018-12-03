@@ -42,19 +42,6 @@ public class Method {
         }
     }
 
-    public String ReceiveInstructionsFromWeigl(String s)
-    {
-        try {
-            byte[] buf = new byte[2048];
-            DatagramPacket packet = new DatagramPacket(buf, buf.length);
-            socket.receive(packet);
-            return new String(packet.getData());
-        } catch (Exception e) {
-            System.out.println("Handle exception here......");
-        }
-        return null;
-    }
-
     public void ResetAllPositions(float fadeTime)
     {
         System.out.println("Resetting all to Middle in "+fadeTime+" seconds");

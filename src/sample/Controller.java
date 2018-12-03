@@ -15,6 +15,9 @@ import java.util.ResourceBundle;
 import java.util.Timer;
 import java.util.TimerTask;
 
+//Class linked to the Main screen and Sample.fxml
+//Power button, Select Shows and Admin Panel
+
 public class Controller implements Initializable {
     DatagramSocket socket;
     InetAddress address;
@@ -33,6 +36,7 @@ public class Controller implements Initializable {
         testMethod.ResetAllPositions(3);
 
     }
+    //Start selecting shows
     public void PressSelect(javafx.event.ActionEvent event) throws IOException
     {
         testMethod.ResetAllPositions(3);
@@ -47,6 +51,7 @@ public class Controller implements Initializable {
         Parent pageone = FXMLLoader.load(getClass().getResource("StartShows.fxml"));
         testMethod.ShowSceneFunction(pageone, event);
     }
+    //Log in to the Admin Panel
     public void PressAdmin(javafx.event.ActionEvent event) throws IOException
     {
         testMethod.ResetAllPositions(3);
@@ -61,7 +66,8 @@ public class Controller implements Initializable {
         Parent pageone = FXMLLoader.load(getClass().getResource("AdminLogin.fxml"));
         testMethod.ShowSceneFunction(pageone, event);
     }
-
+    //Power Tom On/Off
+    //Stores preference on application restart
     public void PressPower(javafx.event.ActionEvent event) throws IOException
     {
         System.out.println("Pressing Power");

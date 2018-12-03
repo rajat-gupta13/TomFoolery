@@ -10,6 +10,8 @@ import java.io.IOException;
 import java.util.Timer;
 import java.util.TimerTask;
 
+//Class for Calisthenics
+//Each function can be run either individually or together.
 public class Calisthenics {
 
     Timer timer = new Timer();
@@ -31,6 +33,7 @@ public class Calisthenics {
     {
 
     }
+    //Starts running Head Turn looped
     public void PressHeadTurn(javafx.event.ActionEvent event) throws Exception {
 
         headturn.setStyle("-fx-background-color: #66BB6A; ");
@@ -39,32 +42,35 @@ public class Calisthenics {
         testMethod.SendInstructionToWeigl(s);
 
     }
+    //Starts running Head Tilt looped
     public void PressHeadTilt(javafx.event.ActionEvent event) throws Exception {
         headtilt.setStyle("-fx-background-color: #66BB6A; ");
         System.out.println("Test Head tilt");
         String s="!vcc1=0!rsal804#";
         testMethod.SendInstructionToWeigl(s);
     }
-
+    //Starts running Torso Forebend looped
     public void PressTorsoBend(javafx.event.ActionEvent event) throws Exception {
         torso.setStyle("-fx-background-color: #66BB6A; ");
         System.out.println("Test Torso Bend");
         String s="!vcc1=0!rsal805#";
         testMethod.SendInstructionToWeigl(s);
     }
-
+    //Starts running Mouth looped
     public void PressMouth(javafx.event.ActionEvent event) throws Exception {
         mouth.setStyle("-fx-background-color: #66BB6A; ");
         System.out.println("TestMouthOpen");
         String s="!vcc1=0!rsal802#";
         testMethod.SendInstructionToWeigl(s);
     }
+    //Starts running Scepter looped
     public void PressScepter(javafx.event.ActionEvent event) throws Exception {
         scepter.setStyle("-fx-background-color: #66BB6A; ");
         System.out.println("TestScepter");
         String s="!vcc1=0!rsal803#";
         testMethod.SendInstructionToWeigl(s);
     }
+    //Stops all playing calisthenics and returns Tom to idle position
     public void PressStop(javafx.event.ActionEvent event) throws Exception {
         testMethod.ResetAllPositions(3);
         ToggleDisable(true);

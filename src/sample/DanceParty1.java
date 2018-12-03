@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.*;
 
+//Class for Dance Party show
 public class DanceParty1 implements Initializable{
     @FXML
     private Label tom;
@@ -63,13 +64,13 @@ public class DanceParty1 implements Initializable{
     {
 
     }
-
+    //Loads Main Menu
     public void PressMainMenu(javafx.event.ActionEvent event) throws IOException
     {
         testMethod.PressMainMenuFunction(event);
         Method.showQueue.clear();
     }
-
+    //Loads next show in queue
     public void PressNext(javafx.event.ActionEvent event) throws Exception
     {
         testMethod.ResetAllPositions(1.5f);
